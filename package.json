@@ -34,7 +34,17 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "curly": ["error", "all"],
+      "indent": ["error", 2],
+      "no-console": ["warn"],
+      "no-unused-vars": ["warn"],
+      "quotes": ["warn", "double"],
+      "semi": ["warn", "always"],
+      "vue/html-indent": ["warn", 2],
+      "vue/no-unused-components": "warn",
+      "vue/singleline-html-element-content-newline": "off"
+    }
   },
   "browserslist": [
     "> 1%",

@@ -1,15 +1,13 @@
 <template>
-  <div class="hello">
-    Under construction! Please check back later
-  </div>
+  <div class="hello">Under construction! Please check back later</div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 

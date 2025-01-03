@@ -18,7 +18,9 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^8.0.3",
     "gh-pages": "^6.3.0"
   },
@@ -27,23 +29,53 @@
     "env": {
       "node": true
     },
+    "plugins": [
+      "vue",
+      "prettier"
+    ],
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "prettier"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
     "rules": {
-      "curly": ["error", "all"],
-      "indent": ["error", 2],
-      "no-console": ["warn"],
-      "no-unused-vars": ["warn"],
-      "quotes": ["warn", "double"],
-      "semi": ["warn", "always"],
-      "vue/html-indent": ["warn", 2],
-      "vue/no-unused-components": "warn",
-      "vue/singleline-html-element-content-newline": "off"
+      "curly": [
+        "warn",
+        "all"
+      ],
+      "indent": [
+        "warn",
+        2
+      ],
+      "no-console": [
+        "warn"
+      ],
+      "no-undef": "warn",
+      "no-unused-vars": "warn",
+      "prettier/prettier": ["warn", {
+        "singleQuote": false,
+        "trailingComma": "all"
+      }],
+      "quotes": [
+        "warn",
+        "double"
+      ],
+      "semi": [
+        "warn",
+        "always"
+      ],
+      "vue/html-indent": [
+        "warn",
+        2
+      ],
+      "vue/no-parsing-error": "warn",
+      "vue/no-unused-vars": "warn",
+      "vue/singleline-html-element-content-newline": "off",
+      "vue/script-setup-uses-vars": "warn"
     }
   },
   "browserslist": [

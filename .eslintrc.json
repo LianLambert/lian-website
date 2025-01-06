@@ -25,7 +25,8 @@
     "prettier/prettier": ["warn", {
         "singleQuote": false,
         "trailingComma": "all",
-        "semi": true
+        "semi": true,
+        "htmlWhitespaceSensitivity": "ignore"
       }
     ],
     "semi": ["warn", "always"],

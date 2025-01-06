@@ -1,14 +1,25 @@
 <template>
-  <HelloWorld />
+  <div id="app">
+    <MainNavBar />
+    <div id="main-container">
+      <section id="about-section" style="height: 300px">About Section</section>
+      <section id="experience-section" style="height: 300px">
+        Experience Section
+      </section>
+      <section id="projects-section" style="height: 300px">Projects Section</section>
+      <section id="abilities-section" style="height: 300px">Abilities Section</section>
+      <section id="contact-section" style="height: 300px">Contact Section</section>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import MainNavBar from "./components/MainNavBar.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    MainNavBar,
   },
 };
 </script>
@@ -20,6 +31,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

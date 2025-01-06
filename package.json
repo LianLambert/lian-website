@@ -9,6 +9,7 @@
     "deploy": "vue-cli-service build && gh-pages -d dist"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
   },

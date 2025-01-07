@@ -6,38 +6,47 @@
     </b-navbar-brand>
 
     <!-- Toggle -->
-    <b-navbar-toggle id="nav-toggle" target="navbar-content" class="shadow-none" @mouseenter="openNavbar" @mouseleave="closeNavbar">
+    <b-navbar-toggle
+      id="nav-toggle"
+      target="navbar-content"
+      class="shadow-none"
+      @mouseenter="openNavbar"
+      @mouseleave="closeNavbar"
+      @click="toggleNavbar"
+    >
       <img src="../assets/hamburger-icon.png" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
     <b-collapse id="nav-content" v-model="isNavExpanded" is-nav @mouseenter="openNavbar" @mouseleave="closeNavbar">
-      <b-navbar-nav class="d-flex justify-content-around w-100">
+      <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
-        <div id="nav-links-container" class="centered flex-lg-row flex-column">
-          <b-nav-item class="nav-link" href="#about" @click="closeNavbar" active>about</b-nav-item>
-          <b-nav-item class="nav-link" href="#experience" @click="closeNavbar">experience</b-nav-item>
-          <b-nav-item class="nav-link" href="#projects" @click="closeNavbar">projects</b-nav-item>
-          <b-nav-item class="nav-link" href="#abilities" @click="closeNavbar">abilities</b-nav-item>
-          <b-nav-item class="nav-link" href="#contact" @click="closeNavbar">contact</b-nav-item>
-        </div>
+        <div class="centered">
+          <div id="nav-links-container" class="centered flex-lg-row flex-column">
+            <b-nav-item class="nav-link" href="#about" @click="closeNavbar" active>about</b-nav-item>
+            <b-nav-item class="nav-link" href="#experience" @click="closeNavbar">experience</b-nav-item>
+            <b-nav-item class="nav-link" href="#projects" @click="closeNavbar">projects</b-nav-item>
+            <b-nav-item class="nav-link" href="#abilities" @click="closeNavbar">abilities</b-nav-item>
+            <b-nav-item class="nav-link" href="#contact" @click="closeNavbar">contact</b-nav-item>
+          </div>
 
-        <!-- Social Icons -->
-        <div id="nav-icons-container" class="centered">
-          <div class="nav-icon-container">
-            <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
-              <img src="../assets/resume-white.png" class="nav-icon" alt="Resume" />
-            </a>
-          </div>
-          <div class="nav-icon-container">
-            <a href="https://github.com/LianLambert" target="_blank">
-              <img src="../assets/github-white.png" class="nav-icon" alt="GitHub" />
-            </a>
-          </div>
-          <div class="nav-icon-container">
-            <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
-              <img src="../assets/linkedin-white.png" class="nav-icon" alt="LinkedIn" />
-            </a>
+          <!-- Social Icons -->
+          <div id="nav-icons-container" class="centered">
+            <div class="nav-icon-container">
+              <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
+                <img src="../assets/resume-white.png" class="nav-icon" alt="Resume" />
+              </a>
+            </div>
+            <div class="nav-icon-container">
+              <a href="https://github.com/LianLambert" target="_blank">
+                <img src="../assets/github-white.png" class="nav-icon" alt="GitHub" />
+              </a>
+            </div>
+            <div class="nav-icon-container">
+              <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
+                <img src="../assets/linkedin-white.png" class="nav-icon" alt="LinkedIn" />
+              </a>
+            </div>
           </div>
         </div>
       </b-navbar-nav>
@@ -55,6 +64,10 @@ const isNavExpanded = ref(false);
 const navLinkElements = ref(null);
 const sectionElements = ref(null);
 const currentSection = ref(null);
+
+const toggleNavbar = () => {
+  isNavExpanded.value = !isNavExpanded.value;
+};
 
 const openNavbar = () => {
   isNavExpanded.value = true;
@@ -106,7 +119,7 @@ window.addEventListener("scroll", () => {
 }
 
 .nav-icon-container:hover {
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 .nav-icon {
@@ -125,16 +138,21 @@ window.addEventListener("scroll", () => {
   align-items: center;
 }
 
-#nav-links-container li a {
-  color: #ffffff80;
-  transition: all 0.2s;
+#nav-links-container {
+  margin-right: 4vw;
 }
 
-#nav-links-container li a:hover {
+#nav-links-container .nav-link {
+  color: #ffffff80;
+  transition: all 0.2s;
+  padding: 10px;
+}
+
+#nav-links-container .nav-link:hover {
   color: white;
 }
 
-#nav-links-container li a.active {
+#nav-links-container .nav-link.active {
   color: white;
 }
 
@@ -146,6 +164,7 @@ window.addEventListener("scroll", () => {
   border: none;
   box-shadow: none;
   padding: 5px 10px;
+  padding-left: 50px;
   height: 70px;
 }
 
@@ -159,22 +178,18 @@ window.addEventListener("scroll", () => {
 @media (min-width: 992px) {
   #logo {
     margin-left: 7vw;
+    margin-right: 7vw;
   }
 }
 
 @media (max-width: 992px) {
-  #nav-links-container li a {
+  #nav-links-container li {
     width: 100vw;
     transition: all 0.2s;
   }
 
   #nav-links-container li:hover {
-    background-color: #111111;
-  }
-
-  #nav-links-container li {
-    color: white;
+    background-color: #202020;
   }
 }
 </style>
-

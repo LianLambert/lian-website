@@ -6,12 +6,12 @@
     </b-navbar-brand>
 
     <!-- Toggle -->
-    <b-navbar-toggle id="nav-toggle" target="navbar-content" class="shadow-none" @click="toggleNavbar">
+    <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
       <img src="../assets/hamburger-icon.png" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
-    <b-collapse id="nav-content" v-model="isNavExpanded" is-nav @mouseenter="openNavbar" @mouseleave="closeNavbar">
+    <b-collapse id="nav-content" is-nav v-model="isNavExpanded" @mouseenter="openNavbar" @mouseleave="closeNavbar">
       <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
@@ -26,21 +26,20 @@
         <div id="nav-icons-container" class="centered">
           <div class="nav-icon-container">
             <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
-              <img src="../assets/resume-white.png" class="nav-icon" alt="Resume" />
+              <img src="../assets/resume-white.png" alt="Resume" />
             </a>
           </div>
           <div class="nav-icon-container">
             <a href="https://github.com/LianLambert" target="_blank">
-              <img src="../assets/github-white.png" class="nav-icon" alt="GitHub" />
+              <img src="../assets/github-white.png" alt="GitHub" />
             </a>
           </div>
           <div class="nav-icon-container">
             <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
-              <img src="../assets/linkedin-white.png" class="nav-icon" alt="LinkedIn" />
+              <img src="../assets/linkedin-white.png" alt="LinkedIn" />
             </a>
           </div>
         </div>
-
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -82,7 +81,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 1}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight}px`;
   }
 
   // closes navbar if user clicks outside it
@@ -114,6 +113,17 @@ window.addEventListener("scroll", () => {
 });
 </script>
 <style>
+#nav-all {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-icon-container {
   display: flex;
   justify-content: center;
@@ -127,37 +137,20 @@ window.addEventListener("scroll", () => {
   filter: brightness(70%);
 }
 
-.nav-icon {
+.nav-icon-container > a > img {
   height: 30px;
   width: auto;
 }
 
-#nav-all {
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  height: 100%;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#nav-links-container {
-  margin-right: 4vw;
-}
-
-#nav-links-container .nav-link {
+#nav-links-container > li > a {
   color: #ffffff80;
   transition: all 0.2s;
   padding: 10px;
+  width: 100%;
 }
 
-#nav-links-container .nav-link:hover {
-  color: white;
-}
-
-#nav-links-container .nav-link.active {
+#nav-links-container > li > a:hover,
+#nav-links-container > li > a.active {
   color: white;
 }
 
@@ -189,16 +182,30 @@ window.addEventListener("scroll", () => {
     margin-left: 7vw;
     margin-right: 7vw;
   }
+
+  #nav-links-container {
+    margin-right: 4vw;
+  }
 }
 
-@media (max-width: 992px) {
-  #nav-links-container li {
-    width: 100vw;
-    transition: all 0.2s;
-  }
-
+@media (max-width: 991px) {
   #nav-links-container li:hover {
     background-color: #202020;
+  }
+
+  #nav-links-container,
+  #nav-links-container > li,
+  #nav-links-container > li > a {
+    width: 100%;
+  }
+
+  #nav-links-container > li,
+  #nav-links-container > li > a {
+    height: 70px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

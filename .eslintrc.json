@@ -26,7 +26,9 @@
         "singleQuote": false,
         "trailingComma": "all",
         "semi": true,
-        "htmlWhitespaceSensitivity": "ignore"
+        "htmlWhitespaceSensitivity": "ignore",
+        "printWidth": 150,
+        "singleAttributePerLine": false
       }
     ],
     "semi": ["warn", "always"],

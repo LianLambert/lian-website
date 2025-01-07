@@ -14,34 +14,33 @@
     <b-collapse id="nav-content" v-model="isNavExpanded" is-nav @mouseenter="openNavbar" @mouseleave="closeNavbar">
       <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
-        <div class="centered">
-          <div id="nav-links-container" class="centered flex-lg-row flex-column">
-            <b-nav-item class="nav-link" href="#about" @click="closeNavbar" active>about</b-nav-item>
-            <b-nav-item class="nav-link" href="#experience" @click="closeNavbar">experience</b-nav-item>
-            <b-nav-item class="nav-link" href="#projects" @click="closeNavbar">projects</b-nav-item>
-            <b-nav-item class="nav-link" href="#abilities" @click="closeNavbar">abilities</b-nav-item>
-            <b-nav-item class="nav-link" href="#contact" @click="closeNavbar">contact</b-nav-item>
-          </div>
+        <div id="nav-links-container" class="centered flex-lg-row flex-column">
+          <b-nav-item class="nav-link" href="#about" @click="closeNavbar" active>about</b-nav-item>
+          <b-nav-item class="nav-link" href="#experience" @click="closeNavbar">experience</b-nav-item>
+          <b-nav-item class="nav-link" href="#projects" @click="closeNavbar">projects</b-nav-item>
+          <b-nav-item class="nav-link" href="#abilities" @click="closeNavbar">abilities</b-nav-item>
+          <b-nav-item class="nav-link" href="#contact" @click="closeNavbar">contact</b-nav-item>
+        </div>
 
-          <!-- Social Icons -->
-          <div id="nav-icons-container" class="centered">
-            <div class="nav-icon-container">
-              <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
-                <img src="../assets/resume-white.png" class="nav-icon" alt="Resume" />
-              </a>
-            </div>
-            <div class="nav-icon-container">
-              <a href="https://github.com/LianLambert" target="_blank">
-                <img src="../assets/github-white.png" class="nav-icon" alt="GitHub" />
-              </a>
-            </div>
-            <div class="nav-icon-container">
-              <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
-                <img src="../assets/linkedin-white.png" class="nav-icon" alt="LinkedIn" />
-              </a>
-            </div>
+        <!-- Social Icons -->
+        <div id="nav-icons-container" class="centered">
+          <div class="nav-icon-container">
+            <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
+              <img src="../assets/resume-white.png" class="nav-icon" alt="Resume" />
+            </a>
+          </div>
+          <div class="nav-icon-container">
+            <a href="https://github.com/LianLambert" target="_blank">
+              <img src="../assets/github-white.png" class="nav-icon" alt="GitHub" />
+            </a>
+          </div>
+          <div class="nav-icon-container">
+            <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
+              <img src="../assets/linkedin-white.png" class="nav-icon" alt="LinkedIn" />
+            </a>
           </div>
         </div>
+
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

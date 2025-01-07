@@ -2,7 +2,7 @@
   <div id="app">
     <MainNavBar />
     <div id="sections-container">
-      <section id="about" class="section">About Section</section>
+      <AboutSection />
       <section id="experience" class="section">Experience Section</section>
       <section id="projects" class="section" style="background-color: black">Projects Section</section>
       <section id="abilities" class="section">Abilities Section</section>
@@ -11,15 +11,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import MainNavBar from "./components/MainNavBar.vue";
-
-export default {
-  name: "App",
-  components: {
-    MainNavBar,
-  },
-};
+import AboutSection from "./components/AboutSection.vue";
 </script>
 <style>
 .section {

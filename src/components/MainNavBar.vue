@@ -6,14 +6,7 @@
     </b-navbar-brand>
 
     <!-- Toggle -->
-    <b-navbar-toggle
-      id="nav-toggle"
-      target="navbar-content"
-      class="shadow-none"
-      @mouseenter="openNavbar"
-      @mouseleave="closeNavbar"
-      @click="toggleNavbar"
-    >
+    <b-navbar-toggle id="nav-toggle" target="navbar-content" class="shadow-none" @click="toggleNavbar">
       <img src="../assets/hamburger-icon.png" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
@@ -55,7 +48,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const navbar = ref(null);
 const isNavExpanded = ref(false);
@@ -77,6 +70,12 @@ const closeNavbar = () => {
   isNavExpanded.value = false;
 };
 
+const handleClickOutsideNav = (event) => {
+  if (navbar.value && !navbar.value.contains(event.target)) {
+    closeNavbar();
+  }
+};
+
 onMounted(() => {
   navbar.value = document.getElementById("nav-all");
   navLinkElements.value = document.querySelectorAll(".nav-link");
@@ -86,6 +85,13 @@ onMounted(() => {
   if (navbar.value) {
     document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 1}px`;
   }
+
+  // closes navbar if user clicks outside it
+  document.addEventListener("click", handleClickOutsideNav);
+});
+
+onUnmounted(() => {
+  document.removeEventListener("click", handleClickOutsideNav);
 });
 
 window.addEventListener("scroll", () => {
@@ -173,6 +179,10 @@ window.addEventListener("scroll", () => {
   height: 40px;
   margin: 10px;
   transition: margin 0.4s;
+}
+
+#logo:hover {
+  filter: brightness(70%);
 }
 
 @media (min-width: 992px) {

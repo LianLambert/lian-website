@@ -11,7 +11,7 @@
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
-    <b-collapse id="nav-content" v-model="isNavbarCollapsed" is-nav @mouseenter="openNavbar" @mouseleave="closeNavbar">
+    <b-collapse id="nav-content" v-model="isNavExpanded" is-nav @mouseenter="openNavbar" @mouseleave="closeNavbar">
       <b-navbar-nav class="d-flex justify-content-around w-100">
         <!-- Navbar Links -->
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
@@ -49,7 +49,7 @@
 import { ref, onMounted } from "vue";
 
 const navbar = ref(null);
-const isNavbarCollapsed = ref(false);
+const isNavExpanded = ref(false);
 
 // used to update active tags during scroll
 const navLinkElements = ref(null);
@@ -57,11 +57,11 @@ const sectionElements = ref(null);
 const currentSection = ref(null);
 
 const openNavbar = () => {
-  isNavbarCollapsed.value = true;
+  isNavExpanded.value = true;
 };
 
 const closeNavbar = () => {
-  isNavbarCollapsed.value = false;
+  isNavExpanded.value = false;
 };
 
 onMounted(() => {

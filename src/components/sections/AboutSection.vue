@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="section" style="background-color: #ffffff">To be created!</section>
+  <section id="about" class="section" style="background-color: #ffffff">About Section!</section>
 </template>
 <script setup>
 import { ref, onMounted } from "vue";

@@ -3,17 +3,21 @@
     <MainNavBar />
     <div id="sections-container">
       <AboutSection />
-      <section id="experience" class="section">Experience Section</section>
-      <section id="projects" class="section" style="background-color: black">Projects Section</section>
-      <section id="abilities" class="section">Abilities Section</section>
-      <section id="contact" class="section">Contact Section</section>
+      <ExperienceSection />
+      <ProjectSection />
+      <AbilitySection />
+      <ContactSection />
     </div>
   </div>
 </template>
 
 <script setup>
 import MainNavBar from "./components/MainNavBar.vue";
-import AboutSection from "./components/AboutSection.vue";
+import AboutSection from "./components/sections/AboutSection.vue";
+import ExperienceSection from "./components/sections/ExperienceSection.vue";
+import ProjectSection from "./components/sections/ProjectSection.vue";
+import AbilitySection from "./components/sections/AbilitySection.vue";
+import ContactSection from "./components/sections/ContactSection.vue";
 </script>
 <style>
 .section {

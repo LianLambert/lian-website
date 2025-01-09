@@ -27,6 +27,6 @@ const stars = computed(() => Array.from({ length: 5 }, (_, i) => i + 1));
 
 <style scoped>
 .star {
-  font-size: 24px;
+  font-size: 20px;
 }
 </style>

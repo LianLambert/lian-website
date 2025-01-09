@@ -20,8 +20,4 @@ import AbilitySection from "./components/sections/AbilitySection.vue";
 import ContactSection from "./components/sections/ContactSection.vue";
 </script>
 <style>
-/* to do: remove this */
-.section {
-  min-height: 400px;
-}
 </style>

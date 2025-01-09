@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center w-100">
+  <div class="ability-rating">
     <span>{{ ability }}</span>
     <StarRating :rating="rating" />
   </div>
@@ -22,4 +22,17 @@ defineProps({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.ability-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 4px;
+  margin: 2px;
+}
+
+.ability-rating:hover {
+  background-color: #eeeeee;
+}
+</style>

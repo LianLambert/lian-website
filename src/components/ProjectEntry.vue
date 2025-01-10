@@ -1,7 +1,7 @@
 <template>
   <div class="project-entry centered col-12 col-md-6">
     <div class="project-entry-image-container centered">
-      <img :src="image" class="project-entry-image" >
+      <img :src="image" class="project-entry-image" />
     </div>
     <div class="project-entry-details">
       <h2>
@@ -14,7 +14,7 @@
 <script setup>
 import { defineProps } from "vue";
 
-const props = defineProps({
+defineProps({
   title: {
     required: true,
     type: String,

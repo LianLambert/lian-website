@@ -19,5 +19,4 @@ import ProjectSection from "./components/sections/ProjectSection.vue";
 import AbilitySection from "./components/sections/AbilitySection.vue";
 import ContactSection from "./components/sections/ContactSection.vue";
 </script>
-<style>
-</style>
+<style></style>

@@ -1,13 +1,11 @@
 <template>
   <div id="app">
+    <AboutSection />
     <MainNavBar />
-    <div id="sections-container">
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectSection />
-      <AbilitySection />
-      <ContactSection />
-    </div>
+    <ExperienceSection />
+    <ProjectSection />
+    <AbilitySection />
+    <ContactSection />
   </div>
 </template>
 

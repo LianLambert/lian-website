@@ -119,6 +119,8 @@ window.addEventListener("scroll", () => {
   left: 0;
   width: 100vw;
   height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
   display: flex;
   justify-content: center;

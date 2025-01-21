@@ -13,7 +13,7 @@
         &nbsp;
         <span>{{ location }}</span>
         <span v-if="props.link && props.linkText">
-          &nbsp;|
+          &nbsp;|&nbsp;
           <a :href="props.link">
             <img :src="linkIcon" class="experience-entry-icon" alt="link icon" />
             {{ props.linkText }}
@@ -24,8 +24,8 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "../assets/link.png";
-import locationPinIcon from "../assets/location-pin.png";
+import linkIcon from "../assets/link_white.png";
+import locationPinIcon from "../assets/pin_white.png";
 import { defineProps, computed } from "vue";
 import { format } from "date-fns";
 

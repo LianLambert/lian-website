@@ -50,7 +50,7 @@ import ExperienceEntry from "../ExperienceEntry.vue";
   align-items: center;
   width: 100%;
   max-width: 900px;
-  color: rgb(241, 241, 241);
+  color: rgb(229, 229, 229);
   text-align: center;
 }
 </style>

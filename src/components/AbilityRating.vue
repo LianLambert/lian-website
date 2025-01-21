@@ -28,8 +28,9 @@ defineProps({
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 4px;
+  padding: 7px;
   margin: 2px;
+  border-radius: 3px;
 }
 
 .ability-rating:hover {

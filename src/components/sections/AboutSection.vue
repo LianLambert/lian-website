@@ -3,12 +3,12 @@
     <div id="text-container">
       <div id="hey-there">Hey there! &nbsp;I'm Lian</div>
       <div class="row text-start" style="flex-grow: 1;">
-      <div class="col-12 col-md-4 mb-4 details">
+      <div class="col-12 col-md-4 details">
         <div><b>About me:</b></div>
         I'm a recent graduate from McGill with a double major in Software Engineering and Psychology. I love combining tech with an understanding of how people think and interact with design. I’m passionate about web development, game development and anything that lets me use my creativity!
       </div>
       <div class="col-12 col-md-4"></div>
-      <div class="col-12 col-md-4 details">
+      <div class="col-12 col-md-4 details d-flex flex-column justify-content-center">
         <div><b>Name:</b></div>
         <div class="mb-2">Lian Lambert</div>
         <div><b>Age:</b></div>
@@ -59,7 +59,7 @@ onMounted(() => {
 #text-container {
   border-radius: 10px;
   padding: 2vw;
-  background-color: rgba(129, 86, 129, 0.9);
+  background-color: rgba(135, 83, 135, 0.9);
   color: black;
 }
 
@@ -78,15 +78,15 @@ onMounted(() => {
 }
 
 .details {
-  padding: 5vw;
-  font-size: 16px;
+  padding: 0 5vw 3vw 5vw;
+  font-size: 17px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   #lian-pose {
     height: auto;
     max-width: 40%;
-    transform: translateX(-50%);
+    transform: translateX(-10%);
   }
 }
 </style>

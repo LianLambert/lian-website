@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="section centered" style="background-color: #ffffff">
+  <section id="experience" class="section centered">
     <div class="experience-container">
       <h1>Experience</h1>
       <ExperienceEntry
@@ -39,6 +39,10 @@
 import ExperienceEntry from "../ExperienceEntry.vue";
 </script>
 <style scoped>
+#experience {
+  background-color: #331c52;
+}
+
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -46,6 +50,7 @@ import ExperienceEntry from "../ExperienceEntry.vue";
   align-items: center;
   width: 100%;
   max-width: 900px;
+  color: rgb(241, 241, 241);
   text-align: center;
 }
 </style>

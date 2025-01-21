@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="section centered" style="background-color: #ffffff">
+  <section id="project" class="section centered" style="background-color: #ffffff">
     <div class="project-container row">
       <div><h1>Projects</h1></div>
       <ProjectEntry

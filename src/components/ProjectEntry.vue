@@ -1,5 +1,5 @@
 <template>
-  <div class="project-entry centered col-12 col-md-6">
+  <div class="project-entry centered col-12 col-lg-6">
     <div class="project-entry-image-container centered">
       <img :src="image" class="project-entry-image" />
     </div>

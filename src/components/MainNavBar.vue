@@ -116,6 +116,7 @@ window.addEventListener("scroll", () => {
 #nav-all {
   position: sticky;
   top: 0;
+  left: 0;
   width: 100vw;
   height: 100%;
   font-size: 20px;

@@ -137,12 +137,14 @@ window.addEventListener("scroll", () => {
   
   &:hover {
     filter: brightness(70%);
+    transform: scale(1.05);
   }
 }
 
 .nav-icon-container > a > img {
   height: 30px;
   width: auto;
+  transform: scale(1.10);
 }
 
 #nav-links-container > li > a {
@@ -154,19 +156,21 @@ window.addEventListener("scroll", () => {
   &:hover,
   &.active {
     color: white;
+    transform: scale(1.05);
   }
 }
 
-#nav-toggle,
-#nav-toggle:focus,
-#nav-toggle:active,
-#nav-toggle-icon:focus {
+#nav-toggle {
   outline: none;
   border: none;
   box-shadow: none;
   padding: 5px 10px;
   padding-left: 50px;
   height: 70px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 #logo {
@@ -177,6 +181,7 @@ window.addEventListener("scroll", () => {
   
   &:hover {
     filter: brightness(70%);
+    transform: scale(1.05);
   }
 }
 

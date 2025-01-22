@@ -71,6 +71,10 @@ onMounted(() => {
   transform: translateX(-50%);
   z-index: 10;
 
+  &:hover {
+    filter: brightness(110%);
+  }
+
   &:hover ~ #text-container {
     transform: scale(1.1) rotate(-2deg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);

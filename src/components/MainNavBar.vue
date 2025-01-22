@@ -112,7 +112,7 @@ window.addEventListener("scroll", () => {
   });
 });
 </script>
-<style>
+<style scoped lang="scss">
 #nav-all {
   position: sticky;
   top: 0;
@@ -134,10 +134,10 @@ window.addEventListener("scroll", () => {
   padding: 0px 5px;
   margin: 15px;
   transition: all 0.2s;
-}
-
-.nav-icon-container:hover {
-  filter: brightness(70%);
+  
+  &:hover {
+    filter: brightness(70%);
+  }
 }
 
 .nav-icon-container > a > img {
@@ -150,11 +150,11 @@ window.addEventListener("scroll", () => {
   transition: all 0.2s;
   padding: 10px;
   width: 100%;
-}
-
-#nav-links-container > li > a:hover,
-#nav-links-container > li > a.active {
-  color: white;
+  
+  &:hover,
+  &.active {
+    color: white;
+  }
 }
 
 #nav-toggle,
@@ -174,10 +174,10 @@ window.addEventListener("scroll", () => {
   height: 40px;
   margin: 10px;
   transition: margin 0.4s;
-}
-
-#logo:hover {
-  filter: brightness(70%);
+  
+  &:hover {
+    filter: brightness(70%);
+  }
 }
 
 @media (min-width: 992px) {

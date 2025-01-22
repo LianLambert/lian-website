@@ -1,7 +1,19 @@
 <template>
   <section id="experience" class="section centered">
     <div class="experience-container">
-      <h1>Experience</h1>
+      <h1 class="mb-3">Experience</h1>
+      <hr style="border-top: 3px solid #331c52; width: 100%; margin: 20px 0;">
+      <div class="text-start justify-content-start align-items-start d-flex w-100"><h2>Education</h2></div>
+      <ExperienceEntry
+        company="McGill University"
+        :startDate="new Date('2019-09-01')"
+        :endDate="new Date('2024-12-31')"
+        position="Double Major Software Engineering & Psychology, Minor in Educational Psychology"
+        description="Notable courses include: Principles of Web Development, Software Design, Modern Compter Games, Database Systems and Algorithms and Data Structures."
+        location="Montreal, QB"
+      />
+      <hr style="border-top: 3px solid #331c52; width: 100%; margin: 20px 0;">
+      <div class="text-start"><h2>Work</h2></div>
       <ExperienceEntry
         company="Hivestack by Perion"
         :startDate="new Date('2024-05-01')"
@@ -38,19 +50,16 @@
 <script setup>
 import ExperienceEntry from "../ExperienceEntry.vue";
 </script>
-<style scoped>
+<style scoped lang="scss">
 #experience {
   background-color: #331c52;
 }
 
 .experience-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 20px 0px;
   width: 100%;
   max-width: 900px;
-  color: rgb(229, 229, 229);
+  /* color: #e7e5e5; */
   text-align: center;
 }
 </style>

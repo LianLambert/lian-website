@@ -4,9 +4,9 @@
       <img :src="image" class="project-entry-image" />
     </div>
     <div class="project-entry-details">
-      <h2>
+      <h3>
         <a :href="link">{{ title }}</a>
-      </h2>
+      </h3>
       <div>{{ description }}</div>
     </div>
   </div>
@@ -33,7 +33,7 @@ defineProps({
   },
 });
 </script>
-<style scoped>
+<style scoped lang="scss">
 .project-entry {
   margin: 15px 0;
 }

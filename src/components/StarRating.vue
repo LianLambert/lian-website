@@ -25,7 +25,7 @@ defineProps({
 const stars = computed(() => Array.from({ length: 5 }, (_, i) => i + 1));
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .star {
   font-size: 20px;
 }

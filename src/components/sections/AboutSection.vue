@@ -9,7 +9,7 @@
           <p>I'm a recent graduate from McGill with a double major in Software Engineering and Psychology. I love combining tech with an understanding of how people think and interact with design. I’m passionate about web development, game development and anything that lets me use my creativity!</p>
         </div>
         <div class="col-12 col-md-4"></div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4" style="padding: 0">
           <div class="details-group">
             <div class="details-label">Name:</div>
             <div>Lian Lambert</div>

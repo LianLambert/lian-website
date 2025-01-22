@@ -39,7 +39,7 @@ import TASCCRCG from "../../assets/TASCCRCG_v.jpg";
 import Portfolio from "../../assets/portfolio_v.jpg";
 
 </script>
-<style scoped>
+<style scoped lang="scss">
 .project-container {
   display: flex;
   justify-content: center;

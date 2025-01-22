@@ -22,7 +22,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .ability-rating {
   display: flex;
   justify-content: space-between;
@@ -31,9 +31,9 @@ defineProps({
   padding: 7px;
   margin: 2px;
   border-radius: 3px;
-}
 
-.ability-rating:hover {
-  background-color: #eeeeee;
+  &:hover {
+    background-color: #f4f1f1;
+  }
 }
 </style>

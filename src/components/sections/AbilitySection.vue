@@ -1,5 +1,5 @@
 <template>
-  <section id="ability" class="section centered flex-column" style="background-color: #ffffff">
+  <section id="ability" class="section centered flex-column">
     <h1>Abilities</h1>
     <div v-for="(category, index) in categories" :key="index" class="ability-category mb-4">
       <h2>{{ category.title }}</h2>
@@ -63,7 +63,11 @@ const categories = [
 ];
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+#ability {
+  background-color: #ebeaea;
+}
+
 .ability-category {
   width: 100%;
   max-width: 900px;

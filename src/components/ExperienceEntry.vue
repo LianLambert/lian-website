@@ -1,13 +1,13 @@
 <template>
   <div class="experience-entry row w-100">
-    <div class="col-12 col-md-4 experience-entry-title">
+    <div class="col-12 col-md-4 experience-entry-title mb-4" style="padding: 0">
       <h3>{{ company }}</h3>
       <div>{{ formattedStartDate }} - {{ formattedEndDate }}</div>
       <div>{{ timeAtPosition }}</div>
     </div>
-    <div class="col-12 col-md-8 experience-entry-details">
+    <div class="col-12 col-md-8 experience-entry-details" style="padding: 0">
       <h4>{{ position }}</h4>
-      <div>{{ description }}</div>
+      <p>{{ description }}</p>
       <div class="experience-entry-location-link">
         <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
         &nbsp;
@@ -24,8 +24,8 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "../assets/link_white.png";
-import locationPinIcon from "../assets/pin_white.png";
+import linkIcon from "../assets/link_dark_purple.png";
+import locationPinIcon from "../assets/pin_dark_purple.png";
 import { defineProps, computed } from "vue";
 import { format } from "date-fns";
 
@@ -89,9 +89,10 @@ const timeAtPosition = computed(() => {
   return result.trim();
 });
 </script>
-<style scoped>
+<style scoped lang="scss">
 .experience-entry {
-  margin: 15px 0;
+  padding: 15px 0;
+  margin: 20px 0;
 }
 
 .experience-entry-icon {
@@ -101,25 +102,16 @@ const timeAtPosition = computed(() => {
 }
 
 .experience-entry-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
   text-align: left;
 }
 
 .experience-entry-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
   text-align: left;
 }
 
 .experience-entry-location-link {
-  display: flex;
-  justify-content: start;
-  align-items: center;
   text-align: left;
+  font-size: 15px;
+  font-weight: 700;
 }
 </style>

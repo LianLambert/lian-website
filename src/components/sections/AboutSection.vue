@@ -69,7 +69,7 @@ onMounted(() => {
   bottom: -37px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 100;
 
   &:hover {
     filter: brightness(110%);
@@ -114,7 +114,7 @@ onMounted(() => {
   text-align: start;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     
     .details-label {
       color: var(--light-purple)

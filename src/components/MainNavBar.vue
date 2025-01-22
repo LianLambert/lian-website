@@ -121,10 +121,11 @@ window.addEventListener("scroll", () => {
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 20px;
+  font-size: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .nav-icon-container {
@@ -188,8 +189,8 @@ window.addEventListener("scroll", () => {
 
 @media (min-width: 992px) {
   #logo {
-    margin-left: 7vw;
-    margin-right: 7vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
   }
 
   #nav-links-container {

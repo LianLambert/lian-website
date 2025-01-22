@@ -1,12 +1,12 @@
 <template>
   <div class="experience-entry row g-0">
     <div class="col-12 col-md-4 experience-entry-title mb-4" style="padding: 0">
-      <h3 style="color:">{{ company }}</h3>
+      <h3 style="color: var(--lightest-purple)">{{ company }}</h3>
       <div>{{ formattedStartDate }} - {{ formattedEndDate }}</div>
       <div>{{ timeAtPosition }}</div>
     </div>
     <div class="col-12 col-md-8 experience-entry-details" style="padding: 0">
-      <h4>{{ position }}</h4>
+      <h4  style="color: var(--lightest-purple)">{{ position }}</h4>
       <p>{{ description }}</p>
       <div class="experience-entry-location-link">
         <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
@@ -24,8 +24,8 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "../assets/link_dark_purple.png";
-import locationPinIcon from "../assets/pin_dark_purple.png";
+import linkIcon from "../assets/link_light_purple.png";
+import locationPinIcon from "../assets/pin_light_purple.png";
 import { defineProps, computed } from "vue";
 import { format } from "date-fns";
 
@@ -91,10 +91,18 @@ const timeAtPosition = computed(() => {
 </script>
 <style scoped lang="scss">
 .experience-entry {
-  color: var(--lightest-purple);
-  padding: px 0;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: var(--dark-purple);
+  color: var(--light-purple);
 }
 
+.experience-entry:hover {
+  filter: brightness(120%);
+  transform: translateY(-7px) rotate(-1deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  color: var(--medium-purple);
+}
 .experience-entry-icon {
   height: 17px;
   margin-right: 2px;
@@ -102,7 +110,6 @@ const timeAtPosition = computed(() => {
 }
 
 .experience-entry-title {
-  color: white !important;
   text-align: left;
 }
 

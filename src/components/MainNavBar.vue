@@ -7,7 +7,7 @@
 
     <!-- Toggle -->
     <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
-      <img src="../assets/hamburger-icon.png" alt="toggle" style="width: 30px; height: auto" />
+      <img src="../assets/hamburger-icon_white.png" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->

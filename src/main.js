@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
-import "./styles/global.css";
+import "./styles/global.scss";
 import { BootstrapVue3 } from "bootstrap-vue-3";
 
 const app = createApp(App);

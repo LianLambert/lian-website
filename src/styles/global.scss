@@ -46,18 +46,24 @@ a {
   min-height: 400px;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  
-  font-size: 45px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 70px;
   font-weight: 1000;
   line-height: 1.5;
   margin-bottom: 10px;
-  color: #bf8cbf;
+  color: var(--medium-purple);
+
+  &:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(130%);
+  }
 }
 
 /* Ability section headings */

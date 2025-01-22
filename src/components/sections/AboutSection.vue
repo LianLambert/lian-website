@@ -117,7 +117,7 @@ onMounted(() => {
     transform: scale(1.02);
     
     .details-label {
-      color: var(--light-purple)
+      color: var(--lightest-purple)
     }
   }
 }
@@ -125,6 +125,7 @@ onMounted(() => {
 .details-label {
   font-size: 23px;
   font-weight: bold;
+  color:var(--light-purple);
 }
 
 @media (max-width: 767px) {

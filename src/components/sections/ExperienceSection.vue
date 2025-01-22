@@ -1,9 +1,9 @@
 <template>
   <section id="experience" class="section centered">
     <div class="experience-container">
-      <h1 class="mb-3">Experience</h1>
-      <hr style="border-top: 3px solid #331c52; width: 100%; margin: 20px 0;">
-      <div class="text-start justify-content-start align-items-start d-flex w-100"><h2>Education</h2></div>
+      <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple);">Experience</h1>
+      <hr class="horizontal-divider">
+      <div class="d-flex"><h2 class="light-bg">Education</h2></div>
       <ExperienceEntry
         company="McGill University"
         :startDate="new Date('2019-09-01')"
@@ -12,8 +12,8 @@
         description="Notable courses include: Principles of Web Development, Software Design, Modern Compter Games, Database Systems and Algorithms and Data Structures."
         location="Montreal, QB"
       />
-      <hr style="border-top: 3px solid #331c52; width: 100%; margin: 20px 0;">
-      <div class="text-start"><h2>Work</h2></div>
+      <hr class="horizontal-divider">
+      <div class="d-flex"><h2 class="light-bg">Work</h2></div>
       <ExperienceEntry
         company="Hivestack by Perion"
         :startDate="new Date('2024-05-01')"
@@ -61,5 +61,11 @@ import ExperienceEntry from "../ExperienceEntry.vue";
   max-width: 900px;
   /* color: #e7e5e5; */
   text-align: center;
+}
+
+.horizontal-divider {
+  border-top: 3px solid var(--lightest-purple);
+  width: 100%;
+  margin: 20px 0;
 }
 </style>

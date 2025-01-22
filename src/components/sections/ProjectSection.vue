@@ -1,7 +1,7 @@
 <template>
   <section id="project" class="section centered" style="background-color: #ffffff">
     <div class="project-container row">
-      <div><h1>Projects</h1></div>
+      <div><h1 class="h1-light-bg">Projects</h1></div>
       <ProjectEntry
         title="Lost At Sea"
         link="https://lianl.itch.io/lost-at-sea"

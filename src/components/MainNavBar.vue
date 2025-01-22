@@ -125,7 +125,7 @@ window.addEventListener("scroll", () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 5;
 }
 
 .nav-icon-container {

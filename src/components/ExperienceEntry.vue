@@ -1,7 +1,7 @@
 <template>
-  <div class="experience-entry row w-100">
+  <div class="experience-entry row g-0">
     <div class="col-12 col-md-4 experience-entry-title mb-4" style="padding: 0">
-      <h3>{{ company }}</h3>
+      <h3 style="color:">{{ company }}</h3>
       <div>{{ formattedStartDate }} - {{ formattedEndDate }}</div>
       <div>{{ timeAtPosition }}</div>
     </div>
@@ -91,8 +91,8 @@ const timeAtPosition = computed(() => {
 </script>
 <style scoped lang="scss">
 .experience-entry {
-  padding: 15px 0;
-  margin: 20px 0;
+  color: var(--lightest-purple);
+  padding: px 0;
 }
 
 .experience-entry-icon {
@@ -102,6 +102,7 @@ const timeAtPosition = computed(() => {
 }
 
 .experience-entry-title {
+  color: white !important;
   text-align: left;
 }
 

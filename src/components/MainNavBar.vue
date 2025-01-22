@@ -112,7 +112,7 @@ window.addEventListener("scroll", () => {
   });
 });
 </script>
-<style scoped lang="scss">
+<style lang="scss">
 #nav-all {
   position: sticky;
   top: 0;
@@ -150,7 +150,7 @@ window.addEventListener("scroll", () => {
   transition: all 0.2s;
   padding: 10px;
   width: 100%;
-  
+
   &:hover,
   &.active {
     color: white;

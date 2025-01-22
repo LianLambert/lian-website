@@ -86,10 +86,9 @@ onMounted(() => {
   align-items: center;
   flex-direction: column;
   max-width: 1200px;
-  background-color: #331c52;
+  background-color: var(--dark-purple);
   border-radius: 10px;
   padding: 2vw;
-  color: #e2b1e2;
 
   &:hover {
     transform: scale(1.1) rotate(-2deg);
@@ -101,6 +100,7 @@ onMounted(() => {
   font-size: 7vw;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding-bottom: 2vw;
+  color: var(--light-purple);
   
   &:hover {
     color: white;
@@ -110,14 +110,14 @@ onMounted(() => {
 .details-group {
   padding: 0 4vw 2vw 4vw;
   font-size: 17px;
-  color:#bf8cbf;
+  color:var(--medium-purple);
   text-align: start;
 
   &:hover {
     transform: scale(1.05);
     
     .details-label {
-      color: #e2b1e2;
+      color: var(--light-purple)
     }
   }
 }

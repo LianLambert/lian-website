@@ -149,6 +149,7 @@ window.addEventListener("scroll", () => {
 
 #nav-links-container > li > a {
   color: #ffffff80;
+  font-weight: 1000;
   transition: all 0.2s;
   padding: 10px;
   width: 100%;

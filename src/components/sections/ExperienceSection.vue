@@ -52,7 +52,7 @@ import ExperienceEntry from "../ExperienceEntry.vue";
 </script>
 <style scoped lang="scss">
 #experience {
-  background-color: #331c52;
+  background-color: var(--dark-purple);
 }
 
 .experience-container {

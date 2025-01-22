@@ -1,14 +1,14 @@
 <template>
   <div class="experience-entry row g-0">
-    <div class="col-12 col-md-4 experience-entry-title mb-4" style="padding: 0">
-      <h3 style="color: var(--lightest-purple)">{{ company }}</h3>
-      <div>{{ formattedStartDate }} - {{ formattedEndDate }}</div>
-      <div>{{ timeAtPosition }}</div>
+    <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
+      <a :href="props.link"><h3 class="section-title">{{ company }}</h3></a>
+      <div style="margin-bottom: 3px">{{ formattedStartDate }} - {{ formattedEndDate }}</div>
+      <div v-if="props.showTimeAtPosition" class="small-bold-text">{{ timeAtPosition }}</div>
     </div>
-    <div class="col-12 col-md-8 experience-entry-details" style="padding: 0">
-      <h4  style="color: var(--lightest-purple)">{{ position }}</h4>
+    <div class="col-12 col-md-8 left-align-text" style="padding: 0">
+      <h4  class="section-title">{{ position }}</h4>
       <p>{{ description }}</p>
-      <div class="experience-entry-location-link">
+      <div class="small-bold-text left-align-text">
         <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
         &nbsp;
         <span>{{ location }}</span>
@@ -61,6 +61,11 @@ const props = defineProps({
     required: false,
     type: String,
   },
+  showTimeAtPosition: {
+    required: false,
+    type: Boolean,
+    default: true,
+  },
 });
 
 const formattedStartDate = computed(() => format(new Date(props.startDate), "MMM yyyy"));
@@ -74,7 +79,7 @@ const timeAtPosition = computed(() => {
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
 
-  let result = "(";
+  let result = "";
   if (years > 0) {
     result += `${years} year${years > 1 ? "s" : ""}`;
   }
@@ -84,7 +89,6 @@ const timeAtPosition = computed(() => {
   if (months > 0) {
     result += `${months} month${months > 1 ? "s" : ""}`;
   }
-  result += ")";
 
   return result.trim();
 });
@@ -95,30 +99,31 @@ const timeAtPosition = computed(() => {
   padding: 20px;
   background-color: var(--dark-purple);
   color: var(--light-purple);
+  
+  &:hover {
+    filter: brightness(120%);
+    transform: translateY(-7px) rotate(-1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    color: var(--medium-purple);
+  }
 }
 
-.experience-entry:hover {
-  filter: brightness(120%);
-  transform: translateY(-7px) rotate(-1deg);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  color: var(--medium-purple);
-}
 .experience-entry-icon {
   height: 17px;
   margin-right: 2px;
   width: auto;
 }
 
-.experience-entry-title {
+.section-title {
+  color: var(--lightest-purple);
+  margin-bottom: 7px;
+}
+
+.left-align-text {
   text-align: left;
 }
 
-.experience-entry-details {
-  text-align: left;
-}
-
-.experience-entry-location-link {
-  text-align: left;
+.small-bold-text {
   font-size: 15px;
   font-weight: 700;
 }

@@ -3,7 +3,7 @@
     <div id="ability-container">
       <div><h1 class="h1-light-bg">Abilities</h1></div>
       <div v-for="(category, index) in categories" :key="index" class="ability-category mb-4">
-        <h2>{{ category.title }}</h2>
+        <h2 class="h2-light-bg">{{ category.title }}</h2>
         <div class="row" style="padding: 0; margin: 0">
           <div v-for="(rating, skill) in category.items" :key="skill" class="col-12 col-md-6">
             <AbilityRating :ability="skill" :rating="rating" />

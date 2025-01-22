@@ -81,11 +81,16 @@ h2 {
   margin-bottom: 10px;
   line-height: 1;
   color: var(--light-purple);
+}
 
-  &:hover {
-    color: var(--lightest-purple);
-    transform: scale(1.2) rotate(-2deg);
-  }
+.h2-dark-bg:hover {
+  color: var(--lightest-purple);
+  transform: scale(1.2) rotate(-2deg);
+}
+
+.h2-light-bg:hover {
+  color: var(--medium-purple);
+  transform: scale(1.2) rotate(-2deg);
 }
 
 h3 {

@@ -3,7 +3,7 @@
     <div class="experience-container">
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple);">Experience</h1>
       <hr class="horizontal-divider">
-      <div class="d-flex"><h2 class="light-bg">Education</h2></div>
+      <div class="d-flex"><h2 class="h2-dark-bg">Education</h2></div>
       <ExperienceEntry
         company="McGill University"
         :startDate="new Date('2019-09-01')"
@@ -13,7 +13,7 @@
         location="Montreal, QB"
       />
       <hr class="horizontal-divider">
-      <div class="d-flex"><h2 class="light-bg">Work</h2></div>
+      <div class="d-flex"><h2 class="h2-dark-bg">Work</h2></div>
       <ExperienceEntry
         company="Hivestack by Perion"
         :startDate="new Date('2024-05-01')"

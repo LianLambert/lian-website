@@ -108,8 +108,8 @@ onMounted(() => {
 
   @media (max-width: 767px) {
     height: auto;
-    max-width: 40%;
-    transform: translateX(-10%);
+    max-width: 65%;
+    transform: translateX(-50%);
   }
 }
 
@@ -143,13 +143,6 @@ onMounted(() => {
   &:hover {
     transform: scale(1.1);
     color: white;
-  }
-
-  @media (max-width: 992px) {
-    &:hover {
-      transform: scale(1.05);
-      color: white;
-    }
   }
 }
 

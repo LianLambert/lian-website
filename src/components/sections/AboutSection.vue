@@ -70,6 +70,10 @@ onMounted(() => {
 });
 </script>
 <style scoped lang="scss">
+* {
+  transition: all 0.3s ease;
+}
+
 #about {
   display: flex;
   align-items: center;

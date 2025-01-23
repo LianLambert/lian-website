@@ -7,7 +7,7 @@
     </div>
     <div class="col-12 col-md-8 left-align-text" style="padding: 0">
       <h4  class="section-title">{{ position }}</h4>
-      <p v-html="description"></p>
+      <div v-html="description" class="my-2"></div>
       <div class="left-align-text">
         <b>
           <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
@@ -99,7 +99,7 @@ const timeAtPosition = computed(() => {
 .experience-entry {
   margin: 30px 0;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: var(--dark-purple);
   color: var(--light-purple);
   

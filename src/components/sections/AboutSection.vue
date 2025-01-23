@@ -5,21 +5,21 @@
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
       <div class="row">
         <div class="col-12 col-md-4 details-group">
-          <p>I'm a recent graduate from<br class="conditional-br"><b>McGill</b> with a double major in <b>Software Engineering</b> and <b>Psychology</b>. I love blending tech with human behavior to create designs that make an impact! I’m passionate about <b>web dev</b>, &nbsp;<b>game dev</b> and anything that lets me use my creativity!</p>
+          <p>I'm a recent graduate from<br class="conditional-br"><b>McGill</b> with a double major in <b>Software&nbsp;Engineering</b> and <b>Psychology</b>. I love blending tech with human behavior to create designs that make an impact! I’m passionate about <b>web&nbsp;dev</b>, &nbsp;<b>game&nbsp;dev</b> and anything that lets me use my creativity!</p>
         </div>
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4" style="padding: 0">
           <div class="details-group">
             <span class="details-label">Name: &nbsp;</span>
-            <span><b>Lian Lambert</b></span>
+            <span><b>Lian&nbsp;Lambert</b></span>
           </div>
           <div class="details-group">
             <span class="details-label">Age: &nbsp;</span>
-            <span id="myAge"><b>{{ age }} years</b></span>
+            <span id="myAge"><b>{{ age }}&nbsp;years</b></span>
           </div>
           <div class="details-group">
             <span class="details-label">Location: &nbsp;</span>
-            <span><b>Montreal, QC</b></span>
+            <span><b>Montreal,&nbsp;QC</b></span>
           </div>
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
@@ -128,8 +128,6 @@ onMounted(() => {
   }
 
   @media (max-width: 992px) {
-    padding: 3vw 2vw;
-
     &:hover {
       transform: scale(1.05) rotate(-1.5deg);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);

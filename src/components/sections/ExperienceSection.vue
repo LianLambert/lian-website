@@ -65,7 +65,6 @@ import ExperienceEntry from "../ExperienceEntry.vue";
   border-radius: 5px;
 }
 
-
 .horizontal-divider {
   border-top: 3px solid var(--lightest-purple);
   width: 100%;

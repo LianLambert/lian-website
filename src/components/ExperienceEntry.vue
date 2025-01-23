@@ -107,7 +107,6 @@ const timeAtPosition = computed(() => {
     filter: brightness(120%);
     transform: translateY(-7px) rotate(-1deg);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    color: var(--medium-purple);
   }
 }
 

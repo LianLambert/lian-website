@@ -3,22 +3,24 @@
     <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
       <a :href="props.link" target="_blank"><h3 class="section-title">{{ company }}</h3></a>
       <div style="margin-bottom: 3px">{{ formattedStartDate }} - {{ formattedEndDate }}</div>
-      <div v-if="props.showTimeAtPosition" class="small-bold-text">{{ timeAtPosition }}</div>
+      <div v-if="props.showTimeAtPosition"><b>{{ timeAtPosition }}</b></div>
     </div>
     <div class="col-12 col-md-8 left-align-text" style="padding: 0">
       <h4  class="section-title">{{ position }}</h4>
-      <p>{{ description }}</p>
-      <div class="small-bold-text left-align-text">
-        <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
-        &nbsp;
-        <span>{{ location }}</span>
-        <span v-if="props.link && props.linkText">
-          &nbsp;|&nbsp;
-          <a :href="props.link" target="_blank">
-            <img :src="linkIcon" class="experience-entry-icon" alt="link icon" />
-            {{ props.linkText }}
-          </a>
-        </span>
+      <p v-html="description"></p>
+      <div class="left-align-text">
+        <b>
+          <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
+          &nbsp;
+          <span>{{ location }}</span>
+          <span v-if="props.link && props.linkText">
+            &nbsp;|&nbsp;
+            <a :href="props.link" target="_blank">
+              <img :src="linkIcon" class="experience-entry-icon" alt="link icon" />
+              {{ props.linkText }}
+            </a>
+          </span>
+        </b>
       </div>
     </div>
   </div>
@@ -124,7 +126,7 @@ const timeAtPosition = computed(() => {
   text-align: left;
 }
 
-.small-bold-text {
+b {
   font-size: 15px;
   font-weight: 700;
 }

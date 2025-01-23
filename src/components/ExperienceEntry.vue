@@ -1,7 +1,7 @@
 <template>
   <div class="experience-entry row g-0">
     <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
-      <a :href="props.link"><h3 class="section-title">{{ company }}</h3></a>
+      <a :href="props.link" target="_blank"><h3 class="section-title">{{ company }}</h3></a>
       <div style="margin-bottom: 3px">{{ formattedStartDate }} - {{ formattedEndDate }}</div>
       <div v-if="props.showTimeAtPosition" class="small-bold-text">{{ timeAtPosition }}</div>
     </div>
@@ -14,7 +14,7 @@
         <span>{{ location }}</span>
         <span v-if="props.link && props.linkText">
           &nbsp;|&nbsp;
-          <a :href="props.link">
+          <a :href="props.link" target="_blank">
             <img :src="linkIcon" class="experience-entry-icon" alt="link icon" />
             {{ props.linkText }}
           </a>
@@ -97,6 +97,7 @@ const timeAtPosition = computed(() => {
 .experience-entry {
   margin: 30px 0;
   padding: 20px;
+  border-radius: 5px;
   background-color: var(--dark-purple);
   color: var(--light-purple);
   

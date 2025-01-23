@@ -1,6 +1,6 @@
 <template>
   <section id="experience" class="section centered">
-    <div class="experience-container">
+    <div id="experience-container">
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple);">Experience</h1>
       <hr class="horizontal-divider">
       <div class="d-flex"><h2 class="heading">Education</h2></div>
@@ -54,9 +54,10 @@ import ExperienceEntry from "../ExperienceEntry.vue";
 <style scoped lang="scss">
 #experience {
   background-color: var(--dark-purple);
+  padding: 4vw 2vw;
 }
 
-.experience-container {
+#experience-container {
   padding: 20px 0px;
   width: 100%;
   max-width: 900px;

@@ -2,7 +2,7 @@
   <section id="ability" class="section centered">
     <div id="ability-container">
       <div><h1 class="h1-light-bg">Abilities</h1></div>
-      <div v-for="(category, index) in categories" :key="index" class="ability-category mb-4">
+      <div v-for="(category, index) in categories" :key="index" class="mb-4">
         <h2 class="h2-light-bg">{{ category.title }}</h2>
         <div class="row" style="padding: 0; margin: 0">
           <div v-for="(rating, skill) in category.items" :key="skill" class="col-12 col-md-6">
@@ -68,12 +68,11 @@ const categories = [
 <style scoped lang="scss">
 #ability {
   background-color: #ebeaea;
+  padding: 4vw 2vw;
 }
 
-.ability-category {
-  width: 100%;
+#ability-container {
   max-width: 900px;
-  text-align: center;
 }
 
 @media (max-width: 768px) {

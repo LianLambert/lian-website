@@ -1,6 +1,6 @@
 <template>
   <section id="project" class="section centered" style="background-color: #ffffff">
-    <div class="project-container row">
+    <div id="project-container" class="row">
       <div><h1 class="h1-light-bg">Projects</h1></div>
       <ProjectEntry
         title="Lost At Sea"
@@ -40,7 +40,11 @@ import Portfolio from "../../assets/portfolio_v.jpg";
 
 </script>
 <style scoped lang="scss">
-.project-container {
+#project {
+  padding: 4vw 2vw;
+}
+
+#project-container {
   display: flex;
   justify-content: center;
   align-items: center;

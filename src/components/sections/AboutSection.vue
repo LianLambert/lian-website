@@ -5,23 +5,34 @@
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
       <div class="row">
         <div class="col-12 col-md-4 details-group">
-          <div class="details-label">About me:</div>
-          <p>I'm a recent graduate from McGill with a double major in Software Engineering and Psychology. I love combining tech with an understanding of how people think and interact with design. I’m passionate about web development, game development and anything that lets me use my creativity!</p>
+          <p>I'm a recent graduate from<br><b>McGill</b> with a double major in <b>Software Engineering</b> and <b>Psychology</b>. I love blending tech with human behavior to create designs that make an impact! I’m passionate about <b>web dev</b>, &nbsp;<b>game dev</b> and anything that lets me use my creativity!</p>
         </div>
         <div class="col-12 col-md-4"></div>
         <div class="col-12 col-md-4" style="padding: 0">
           <div class="details-group">
-            <div class="details-label">Name:</div>
-            <div>Lian Lambert</div>
+            <span class="details-label">Name: &nbsp;</span>
+            <span><b>Lian Lambert</b></span>
           </div>
           <div class="details-group">
-            <div class="details-label">Age:</div>
-            <div id="myAge">{{ age }} years</div>
+            <span class="details-label">Age: &nbsp;</span>
+            <span id="myAge"><b>{{ age }} years</b></span>
           </div>
           <div class="details-group">
-            <div class="details-label">Location:</div>
-            <div>Montreal, Québec, Canada</div>
+            <span class="details-label">Location: &nbsp;</span>
+            <span><b>Montreal, QC</b></span>
           </div>
+          <div class="d-flex align-items-center details-group">
+            <span class="details-label">Links: &nbsp;</span>
+            <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
+              <img src="../../assets/resume.svg" class="icon"/>
+            </a>
+            <a class="icon-container" href="https://github.com/LianLambert" target="_blank">
+              <img src="../../assets/github.svg" class="icon"/>
+            </a>
+            <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
+              <img src="../../assets/linkedin.svg" class="icon"/>
+            </a>
+         </div>
         </div>
       </div>
     </div>
@@ -68,7 +79,7 @@ onMounted(() => {
   height: 70%;
   bottom: -37px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-55%);
   z-index: 100;
 
   &:hover {
@@ -76,8 +87,15 @@ onMounted(() => {
   }
 
   &:hover ~ #text-container {
-    transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1) rotate(-1.5deg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+
+  @media (max-width: 767px) {
+    height: auto;
+    max-width: 40%;
+    transform: translateX(-10%);
   }
 }
 
@@ -86,12 +104,12 @@ onMounted(() => {
   align-items: center;
   flex-direction: column;
   max-width: 1200px;
-  background-color: var(--dark-purple);
+  background-color: var(--darkest-purple);
   border-radius: 10px;
-  padding: 2vw;
+  padding: 3vw;
 
   &:hover {
-    transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1) rotate(-1.5deg);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 }
@@ -99,40 +117,69 @@ onMounted(() => {
 #hey-there {
   font-size: 7vw;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  padding-bottom: 2vw;
   color: var(--light-purple);
   
   &:hover {
+    transform: scale(1.1);
     color: white;
   }
 }
 
 .details-group {
-  padding: 0 4vw 2vw 4vw;
+  padding: 1vw 3vw;
   font-size: 17px;
   color:var(--medium-purple);
   text-align: start;
 
+  b {
+    margin: 5px;
+    margin-left: 0;
+    font-size: 19px;
+    border-radius: 5px;
+  }
+
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
+
+    b {
+      padding: 5px 10px;
+      color: var(--dark-purple);
+      background-color: var(--medium-purple);
+    }
     
     .details-label {
       color: var(--lightest-purple)
     }
+
+    .icon-container {
+      padding: 0px;
+      margin: 0 5px;
+      border-radius: 5px;
+      background-color: var(--medium-purple);
+    }
+
+    .icon {
+      // var(--dark-purple)
+      filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(3529%) hue-rotate(237deg) brightness(90%) contrast(100%);
+    }
   }
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+  // var(--medium-purple)
+  filter: brightness(0) saturate(100%) invert(91%) sepia(88%) saturate(7026%) hue-rotate(216deg) brightness(80%) contrast(84%);
+  width: 25px;
+  height: 25px;
+  margin: 5px 10px 5px 10px;
 }
 
 .details-label {
   font-size: 23px;
   font-weight: bold;
   color:var(--light-purple);
-}
-
-@media (max-width: 767px) {
-  #lian-pose {
-    height: auto;
-    max-width: 40%;
-    transform: translateX(-10%);
-  }
 }
 </style>

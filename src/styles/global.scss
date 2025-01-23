@@ -8,11 +8,19 @@
   --lightest-purple: #f6d8f6;
 }
 
+// cannot use transition all because of color attribute
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease;
+  transition: 
+    background-color 0.3s ease, 
+    transform 0.3s ease, 
+    border 0.3s ease, 
+    border-color 0.3s ease, 
+    filter 0.3s ease,
+    padding 0.3s ease,
+    margin 0.3s ease;
 }
 
 body {
@@ -53,6 +61,7 @@ h1 {
   font-weight: 1000;
   line-height: 1.5;
   margin-bottom: 10px;
+  border-radius: 10px;
   color: var(--medium-purple);
 }
 

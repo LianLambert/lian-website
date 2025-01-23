@@ -78,13 +78,17 @@ h2 {
 }
 
 .h2-dark-bg:hover {
-  color: var(--lightest-purple);
-  transform: scale(1.1) rotate(-2deg);
+  border-radius: 5px;
+  padding: 10px 35px;
+  color: var(--dark-purple);
+  background-color: var(--medium-purple);
 }
 
 .h2-light-bg:hover {
-  color: var(--medium-purple);
-  transform: scale(1.1) rotate(-2deg);
+  border-radius: 5px;
+  padding: 10px 35px;
+  color: var(--dark-purple);
+  background-color: var(--medium-purple);
 }
 
 h3 {

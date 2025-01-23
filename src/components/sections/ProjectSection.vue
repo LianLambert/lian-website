@@ -51,5 +51,6 @@ import Portfolio from "../../assets/portfolio_v.jpg";
   text-align: center;
   width: 100%;
   max-width: 1100px;
+  padding: 20px 0px;
 }
 </style>

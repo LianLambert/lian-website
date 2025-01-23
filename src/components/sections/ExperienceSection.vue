@@ -3,7 +3,7 @@
     <div id="experience-container">
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple);">Experience</h1>
       <hr class="horizontal-divider">
-      <div class="d-flex"><h2 class="heading">Education</h2></div>
+      <div class="d-flex"><h2 class="h2-dark-bg">Education</h2></div>
       <ExperienceEntry
         company="McGill University"
         :startDate="new Date('September 1, 2019')"
@@ -14,7 +14,7 @@
         :showTimeAtPosition="false"
       />
       <hr class="horizontal-divider">
-      <div class="d-flex"><h2 class="heading">Work</h2></div>
+      <div class="d-flex"><h2 class="h2-dark-bg">Work</h2></div>
       <ExperienceEntry
         company="Hivestack by Perion"
         :startDate="new Date('May 1, 2024')"
@@ -58,17 +58,13 @@ import ExperienceEntry from "../ExperienceEntry.vue";
 }
 
 #experience-container {
-  padding: 20px 0px;
+  padding: 20px 10px;
   width: 100%;
   max-width: 900px;
   text-align: center;
+  border-radius: 5px;
 }
 
-.heading:hover {
-    padding: 10px 35px;
-    background-color: var(--medium-purple);
-    color: white;
-}
 
 .horizontal-divider {
   border-top: 3px solid var(--lightest-purple);

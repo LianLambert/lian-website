@@ -109,7 +109,7 @@ onMounted(() => {
   @media (max-width: 767px) {
     height: auto;
     max-width: 65%;
-    transform: translateX(-50%);
+    transform: translateX(-40%);
   }
 }
 

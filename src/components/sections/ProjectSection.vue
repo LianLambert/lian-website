@@ -41,7 +41,7 @@ import Portfolio from "../../images/portfolio.png";
 <style scoped lang="scss">
 #project {
   padding: 4vw 2vw;
-  background-color: #f2f2f2;
+  background-color: var(--off-white);
 }
 
 #project-container {

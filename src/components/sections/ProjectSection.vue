@@ -33,10 +33,10 @@
 <script setup>
 import ProjectEntry from "../ProjectEntry.vue";
 
-import LostAtSea from "../../assets/lost-at-sea.png";
-import Commit2Gather from "../../assets/Commit2GatherRed.png";
-import TASCCRCG from "../../assets/TASCCRCG.png";
-import Portfolio from "../../assets/portfolio.png";
+import LostAtSea from "../../images/lost-at-sea.png";
+import Commit2Gather from "../../images/Commit2GatherRed.png";
+import TASCCRCG from "../../images/TASCCRCG.png";
+import Portfolio from "../../images/portfolio.png";
 </script>
 <style scoped lang="scss">
 #project {

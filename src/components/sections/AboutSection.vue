@@ -24,13 +24,13 @@
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
-              <img src="../../assets/resume.svg" class="icon"/>
+              <img src="../../images/resume.svg" class="icon"/>
             </a>
             <a class="icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
-              <img src="../../assets/github.svg" class="icon"/>
+              <img src="../../images/github.svg" class="icon"/>
             </a>
             <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
-              <img src="../../assets/linkedin.svg" class="icon"/>
+              <img src="../../images/linkedin.svg" class="icon"/>
             </a>
          </div>
         </div>
@@ -40,7 +40,7 @@
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import LianPose from "../../assets/lian-pose.png"
+import LianPose from "../../images/lian-pose.png"
 
 const navbar = ref(null);
 const aboutSection = ref(null);
@@ -81,7 +81,7 @@ onMounted(() => {
   position: relative;
   z-index: 10;
   padding: 5vw;
-  background-image: url("../../assets/shapes00.png");
+  background-image: url("../../images/shapes00.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

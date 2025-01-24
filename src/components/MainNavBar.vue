@@ -7,7 +7,7 @@
 
     <!-- Toggle -->
     <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
-      <img src="../images/hamburger-icon_white.png" alt="toggle" style="width: 30px; height: auto" />
+      <img src="../images/hamburger_white.svg" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
@@ -26,17 +26,17 @@
         <div id="nav-icons-container" class="centered">
           <div class="nav-icon-container">
             <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
-              <img src="../images/resume-white.png" alt="Resume" />
+              <img src="../images/resume_white.svg" alt="Resume" />
             </a>
           </div>
           <div class="nav-icon-container">
             <a href="https://github.com/LianLambert" target="_blank">
-              <img src="../images/github-white.png" alt="GitHub" />
+              <img src="../images/github_white.svg" alt="GitHub" />
             </a>
           </div>
           <div class="nav-icon-container">
             <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
-              <img src="../images/linkedin-white.png" alt="LinkedIn" />
+              <img src="../images/linkedin_white.svg" alt="LinkedIn" />
             </a>
           </div>
         </div>

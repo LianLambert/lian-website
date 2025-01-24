@@ -1,23 +1,42 @@
 <template>
-  <div class="col-12 col-lg-6 p-0">
-    <a :href="linkToOpen" target="_blank" class="project-entry centered">
-      <div class="project-entry-image-container">
-        <img :src="image" class="project-entry-image" />
-      </div>
-      <div class="project-entry-details">
-        <h3 class="mb-2 grow-on-hover">{{ title }}</h3>
-        <div class="grow-on-hover">{{ description }}</div>
-        <div 
-          v-if="props.demoLink" 
-          class="watch-demo" 
-          @mouseenter="onWatchDemoEnter" 
-          @mouseleave="onWatchDemoExit"
-          @touchstart="onWatchDemoEnter" 
-          @touchend="onWatchDemoExit">
-          Watch Demo
+  <div class="col-12 col-sm-6 col-lg-4 p-0">
+    <div class="project-entry">
+      <div class="">
+        <!-- media -->
+        <div>
+          <a :href="props.demoLink" target="_blank" rel="noopener noreferrer">
+            <img :src="image" class="project-image" />
+          </a>
+        </div>
+
+        <!-- details -->
+        <div class="project-details">
+
+          <!-- title and description -->
+          <h3 class="project-title"><a :href="props.primaryLink">{{ title }}</a></h3>
+          <p>{{ description }}</p>
+
+          <!-- links -->
+          <div class="d-flex">
+            <a  v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">
+              Watch Demo
+            </a>
+            <a v-if="props.githubLink" :href="props.githubLink" target="_blank" class="project-link centered">
+              <img src="../images/github_white.svg" alt="github"  class="project-entry-icon"/>
+            </a>
+            <a v-if="props.otherLink" :href="props.otherLink" target="_blank" class="project-link centered">
+              <img src="../images/link_white.svg" alt="link"  class="project-entry-icon"/>
+            </a>
+          </div>
         </div>
       </div>
-    </a>
+<!-- maybe bring back one day
+      <div class="hashtags">
+        <span style="color: var(--dark-purple)"> #unity </span>
+        <span style="color: var(--darkest-purple)"> #gamedev </span>
+      </div> 
+-->
+    </div>
   </div>
 </template>
 <script setup>
@@ -28,14 +47,6 @@ const props = defineProps({
     required: true,
     type: String,
   },
-  link: {
-    required: true,
-    type: String,
-  },
-  demoLink: {
-    required: false,
-    type: String,
-  },
   image: {
     required: true,
     type: String,
@@ -44,44 +55,49 @@ const props = defineProps({
     required: true,
     type: String,
   },
+  primaryLink: {
+    required: false,
+    type: String,
+  },
+  githubLink: {
+    required: false,
+    type: String,
+  },
+  demoLink: {
+    required: false,
+    type: String,
+  },
+  otherLink: {
+    requied: false,
+    type: String,
+  },
+  demoVideo: {
+    requied: false,
+    type: String,
+  }
 });
-
-import { ref } from "vue";
-
-const linkToOpen = ref(props.link);
-
-// to do: fix this for mobile too
-function onWatchDemoEnter() {
-  linkToOpen.value = props.demoLink;
-}
-
-function onWatchDemoExit() {
-  linkToOpen.value = props.link;
-}
-
 </script>
 <style scoped lang="scss">
 .project-entry {
   margin: 15px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  border: 4px solid black;
-  color: var(--dark-purple);
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
-  
+  border: 4px solid var(--dark-grey);
+  color: var(--dark-grey);
 
   &:hover {
-    background-color: black;
+    background-color: var(--dark-grey);
     transform: scale(1.01) translateY(-10px);
-    color: var(--medium-purple);
+    color: var(--off-white);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 
-    .watch-demo {
-      margin-top: 10px;
-      border-radius: 5px;
-      padding: 5px 15px;
-      color: var(--dark-purple);
-      background-color: var(--medium-purple);
+    .project-link {
+      color: var(--dark-grey);
+      background-color: var(--off-white);
+    }
+
+    .project-link img {
+      filter: brightness(0) saturate(100%) invert(21%) sepia(0%) saturate(4%) hue-rotate(223deg) brightness(102%) contrast(86%);
     }
   }
 
@@ -90,23 +106,20 @@ function onWatchDemoExit() {
   }
 }
 
-.project-entry-image-container {
-  padding: 10px;
+.project-image {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.05);
   }
 }
 
-.project-entry-image {
-  width: 200px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10%;
-  overflow: hidden;
-}
-
-.project-entry-details {
+.project-details {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -115,18 +128,36 @@ function onWatchDemoExit() {
   text-align: left;
 }
 
-.grow-on-hover:hover {
-  transform: scale(1.05);
-}
-
-.watch-demo {
-  font-size: 17px;
-  font-weight: 700;
-  color: black;
-  padding: 5px 0;
+.project-title {
+  margin-bottom: 5px;
 
   &:hover {
+    background-color: var(--off-white);
+    color: var(--dark-grey);
+    margin: 7px;
+    padding: 7px 20px;
+    border-radius: 7px;
     transform: scale(1.05);
   }
 }
+
+.project-link {
+  margin-right: 10px;
+  border-radius: 7px;
+  color: var(--off-white);
+  font-weight: 700;
+  padding: 5px 12px;
+  background-color: var(--dark-grey);
+  min-height: 35px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.project-entry-icon {
+  height: 20px;
+  width: auto;
+}
+
 </style>

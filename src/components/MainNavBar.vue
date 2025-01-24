@@ -135,7 +135,7 @@ window.addEventListener("scroll", () => {
   padding: 0px 5px;
   margin: 15px;
   transition: all 0.2s;
-  
+
   &:hover {
     filter: brightness(70%);
     transform: scale(1.05);
@@ -145,7 +145,7 @@ window.addEventListener("scroll", () => {
 .nav-icon-container > a > img {
   height: 30px;
   width: auto;
-  transform: scale(1.10);
+  transform: scale(1.1);
 }
 
 #nav-links-container > li > a {
@@ -180,7 +180,7 @@ window.addEventListener("scroll", () => {
   height: 40px;
   margin: 10px;
   transition: margin 0.4s;
-  
+
   &:hover {
     filter: brightness(70%);
     transform: scale(1.05);

@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="section">
-    <img id="lian-pose" :src="LianPose" alt="Lian striking a pose"/>
+    <img id="lian-pose" :src="LianPose" alt="Lian striking a pose" />
     <div id="text-container" :class="{ 'showAnimationPulse': showAnimationPulse }">
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
       <div class="row">
@@ -24,15 +24,15 @@
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
-              <img src="../../images/resume_white.svg" class="icon"/>
+              <img src="../../images/resume_white.svg" class="icon" />
             </a>
             <a class="icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
-              <img src="../../images/github_white.svg" class="icon"/>
+              <img src="../../images/github_white.svg" class="icon" />
             </a>
             <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
-              <img src="../../images/linkedin_white.svg" class="icon"/>
+              <img src="../../images/linkedin_white.svg" class="icon" />
             </a>
-         </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import LianPose from "../../images/lian-pose.png"
+import LianPose from "../../images/lian-pose.png";
 
 const navbar = ref(null);
 const aboutSection = ref(null);
@@ -104,7 +104,7 @@ onMounted(() => {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   }
 
-  @media(max-width: 992px) {
+  @media (max-width: 992px) {
     &:hover ~ #text-container {
       transform: scale(1.05) rotate(-1.5deg);
     }
@@ -141,9 +141,9 @@ onMounted(() => {
 
 #hey-there {
   font-size: 7vw;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: var(--light-purple);
-  
+
   &:hover {
     transform: scale(1.1);
     color: white;
@@ -153,7 +153,7 @@ onMounted(() => {
 .details-group {
   padding: 1vw 3vw;
   font-size: 17px;
-  color:var(--medium-purple);
+  color: var(--medium-purple);
   text-align: start;
 
   b {
@@ -171,9 +171,9 @@ onMounted(() => {
       color: var(--dark-purple);
       background-color: var(--medium-purple);
     }
-    
+
     .details-label {
-      color: var(--lightest-purple)
+      color: var(--lightest-purple);
     }
 
     .icon-container {
@@ -198,23 +198,22 @@ onMounted(() => {
     }
 
     &:hover {
-        transform: scale(1.05);
+      transform: scale(1.05);
 
-        b {
-          padding: 3px 5px;
-        }
-        
-        .icon-container {
-          padding: 0px;
-          margin: 0 3px;
-        }
+      b {
+        padding: 3px 5px;
       }
+
+      .icon-container {
+        padding: 0px;
+        margin: 0 3px;
+      }
+    }
   }
 }
 
 .icon-container:hover {
   transform: scale(1.1);
-
 }
 
 .icon {
@@ -234,7 +233,7 @@ onMounted(() => {
 .details-label {
   font-size: 23px;
   font-weight: bold;
-  color:var(--light-purple);
+  color: var(--light-purple);
 
   @media (max-width: 992px) {
     font-size: 20px;

@@ -6,7 +6,7 @@
       <div v-if="props.showTimeAtPosition"><b>{{ timeAtPosition }}</b></div>
     </div>
     <div class="col-12 col-md-8 left-align-text" style="padding: 0">
-      <h4  class="section-title">{{ position }}</h4>
+      <h4 class="section-title">{{ position }}</h4>
       <div v-html="description" class="my-2"></div>
       <div class="left-align-text">
         <b>
@@ -102,7 +102,7 @@ const timeAtPosition = computed(() => {
   border-radius: 10px;
   background-color: var(--dark-purple);
   color: var(--light-purple);
-  
+
   &:hover {
     filter: brightness(120%);
     transform: translateY(-7px) rotate(-1deg);

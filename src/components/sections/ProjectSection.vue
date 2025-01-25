@@ -5,48 +5,80 @@
       <ProjectEntry
         title="Lost At Sea"
         :image="LostAtSea"
-        description="A minesweeper inspired game with a nautical twist!Created for McGameJam 2025 and made with Unity (C#) in < 48h."
+        description="A minesweeper inspired game with a nautical twist! Use lighthouses to search the sea for lost boats - beware of sharks! Created for McGameJam 2025 and made with Unity (C#) in < 48h."
         primaryLink="https://lianl.itch.io/lost-at-sea"
         demoLink="https://www.youtube.com/watch?v=FVWS2cOupnk&ab_channel=Lian"
         githubLink="https://github.com/LianLambert/Lost-At-Sea-McGameJam2025"
         otherLink="https://lianl.itch.io/lost-at-sea"
+        :demo-video="LostAtSeaVideo"
       />
       <ProjectEntry
         title="Commit2Gather"
         :image="Commit2Gather"
-        description="An appointment booking software to help McGill University students and staff. Created for COMP 307 - Principles of Web Development."
+        description="An appointment booking software to help McGill University students and staff manage office hours and meetings. Created for COMP 307 - Principles of Web Development in Fall 2024."
         primaryLink="https://github.com/lil1an/commit2gather"
         demoLink="https://www.youtube.com/watch?v=-zRBUqTmG-U&t=3s&ab_channel=Lian"
         githubLink="https://github.com/lil1an/commit2gather"
+        :demo-video="Commit2GatherVideo"
       />
       <ProjectEntry
         title="The Adventures of Super Cool Carrot Rocket Chessmaster Girl"
         :image="TASCCRCG"
-        description="A 2D pixel art shoot’em up game! Created for McGameJam 2024 and made with Unity (C#) in < 48h."
+        description="A 2D pixel art shoot’em up game following the theme 'Contraption'! Created for McGameJam 2024 and made with Unity (C#) in < 48h."
         primaryLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
         demoLink="https://www.youtube.com/watch?v=ISyCelCeTNc&t=9s&ab_channel=Lian"
         githubLink="https://github.com/LianLambert/The-Adventures-of-Super-Cool-Carrot-Rocket-Chessmaster-Girl-McGameJam2024"
         otherLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
+        :demo-video="TASCCRCGVideo"
         
       />
       <ProjectEntry
         title="Game Design Portfolio"
         :image="Portfolio"
-        description="A portfolio highlighting my contributions to the ‘Don't Fall Down!' App with game design updates in Version 1.2 and a Fall Guys-inspired level design."
+        description="A portfolio highlighting my contributions to the ‘Don't Fall Down!' App (game design updates were released in Version 1.2) and featuring a Fall Guys-inspired level design concept."
         primaryLink="https://docs.google.com/presentation/d/1hII6qBH_dLbKPqPi4oqcR_595N9Twu2WiQ7Q0VdtBjU/edit#slide=id.gace710277d_0_491"
         otherLink="https://docs.google.com/presentation/d/1hII6qBH_dLbKPqPi4oqcR_595N9Twu2WiQ7Q0VdtBjU/edit#slide=id.gace710277d_0_491"
-        
       />
+      <!-- <ProjectEntry
+        title="FPS Unity Practice"
+        :image="FPSUnity"
+        description="TO DO"
+        primaryLink="TO DO"
+        githubLink="TO DO"
+        demoLink="TO DO"
+        :demo-video="FPSUnityVideo"
+      />
+      
+      need to fix video for this one
+      <ProjectEntry
+        title="Leaping Fish Verlets"
+        :image="LeapingFishVerlets"
+        description="TO DO"
+        primaryLink="TO DO"
+        demoLink="TO DO"
+        :demo-video="LeapingFishVerletsVideo" 
+      /> -->
     </div>
   </section>
 </template>
 <script setup>
 import ProjectEntry from "../ProjectEntry.vue";
 
+// project images
 import LostAtSea from "../../images/lost-at-sea.png";
-import Commit2Gather from "../../images/Commit2GatherRed.png";
+import Commit2Gather from "../../images/Commit2Gather.png";
 import TASCCRCG from "../../images/TASCCRCG.png";
 import Portfolio from "../../images/portfolio.png";
+import FPSUnity from "../../images/fps-unity.png";
+import LeapingFishVerlets from "../../images/portfolio.png";
+
+// project videos
+import LostAtSeaVideo from "../../videos/LostAtSea-preview.mp4";
+import Commit2GatherVideo from "../../videos/Commit2Gather-preview.mp4";
+import TASCCRCGVideo from "../../videos/TASCCRCG-preview.mp4";
+import FPSUnityVideo from "../../videos/FPSUnity-preview.mp4";
+import LeapingFishVerletsVideo from "../../videos/LeapingFishVerlets-preview.mp4";
+
 </script>
 <style scoped lang="scss">
 #project {

@@ -1,11 +1,13 @@
 <template>
   <div class="col-12 col-sm-6 col-lg-4 p-0">
-    <div class="project-entry">
+    <div class="project-entry" @mouseover="isHovering = true" @mouseleave="isHovering = false" @mousedown="pauseAllProjectVideos">
       <div class="">
         <!-- media -->
-        <div>
-          <a :href="props.demoLink" target="_blank" rel="noopener noreferrer">
-            <img :src="image" class="project-image" />
+        <div @onClick="isHovering = false" class="project-media centered">
+          <!-- Show image or video based on hover -->
+          <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
+            <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
+            <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline ></video>
           </a>
         </div>
 
@@ -14,33 +16,33 @@
 
           <!-- title and description -->
           <h3 class="project-title"><a :href="props.primaryLink">{{ title }}</a></h3>
-          <p>{{ description }}</p>
+          <div>{{ description }}</div>
 
           <!-- links -->
-          <div class="d-flex">
-            <a  v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">
+          <div class="project-links-container">
+            <a v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">
               Watch Demo
             </a>
             <a v-if="props.githubLink" :href="props.githubLink" target="_blank" class="project-link centered">
-              <img src="../images/github_white.svg" alt="github"  class="project-entry-icon"/>
+              <img src="../images/github_white.svg" alt="github" class="project-entry-icon"/>
             </a>
             <a v-if="props.otherLink" :href="props.otherLink" target="_blank" class="project-link centered">
-              <img src="../images/link_white.svg" alt="link"  class="project-entry-icon"/>
+              <img src="../images/link_white.svg" alt="link" class="project-entry-icon"/>
             </a>
           </div>
         </div>
       </div>
-<!-- maybe bring back one day
-      <div class="hashtags">
-        <span style="color: var(--dark-purple)"> #unity </span>
-        <span style="color: var(--darkest-purple)"> #gamedev </span>
-      </div> 
--->
+      <!-- maybe bring back one day
+            <div class="hashtags">
+              <span style="color: var(--dark-purple)"> #unity </span>
+              <span style="color: var(--darkest-purple)"> #gamedev </span>
+            </div> 
+      -->
     </div>
   </div>
 </template>
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
 
 const props = defineProps({
   title: {
@@ -74,15 +76,25 @@ const props = defineProps({
   demoVideo: {
     requied: false,
     type: String,
-  }
+  },
 });
+
+const isHovering = ref(false);
+
+function pauseAllProjectVideos() {
+  const videos = document.querySelectorAll('.project-video');
+  videos.forEach((video) => {
+    video.pause();
+  });
+}
 </script>
 <style scoped lang="scss">
 .project-entry {
   margin: 15px;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   border: 4px solid var(--dark-grey);
+  background-color: white;
   color: var(--dark-grey);
 
   &:hover {
@@ -107,20 +119,15 @@ const props = defineProps({
 }
 
 .project-image {
-  margin: 10px;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 10%;
   overflow: hidden;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 }
 
 .project-details {
-  padding: 10px;
+  padding-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -139,6 +146,11 @@ const props = defineProps({
     border-radius: 7px;
     transform: scale(1.05);
   }
+}
+
+.project-links-container {
+  display: flex;
+  margin-top: 10px;
 }
 
 .project-link {
@@ -160,4 +172,37 @@ const props = defineProps({
   width: auto;
 }
 
+.project-media {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.project-image {
+  object-fit: cover;
+}
+
+.project-video {
+  object-fit: contain;
+}
+
+.project-image,
+.project-video {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.project-video {
+  display: block;
+  opacity: 1;
+}
+
+.project-image,
+.project-video {
+  max-height: 150px;
+  max-width: 100%;
+  border-radius: 10px;
+}
 </style>

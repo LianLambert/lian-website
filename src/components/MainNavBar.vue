@@ -74,6 +74,12 @@ const handleClickOutsideNav = (event) => {
   }
 };
 
+const handleResize = () => {
+  if (window.innerWidth >= 992) {
+    closeNavbar();
+  }
+}
+
 onMounted(() => {
   navbar.value = document.getElementById("nav-all");
   navLinkElements.value = document.querySelectorAll(".nav-link");
@@ -86,6 +92,9 @@ onMounted(() => {
 
   // closes navbar if user clicks outside it
   document.addEventListener("click", handleClickOutsideNav);
+
+  // close navbar when window screen is large prevents default open when small
+  window.addEventListener("resize", handleResize);
 });
 
 onUnmounted(() => {

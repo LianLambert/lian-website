@@ -203,30 +203,20 @@ function equalizeProjectHeights() {
   overflow: hidden;
 }
 
+.project-image,
+.project-video {
+  max-height: 150px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .project-image {
   object-fit: cover;
 }
 
 .project-video {
   object-fit: contain;
-}
-
-.project-image,
-.project-video {
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.3s ease;
-}
-
-.project-video {
   display: block;
   opacity: 1;
-}
-
-.project-image,
-.project-video {
-  max-height: 150px;
-  max-width: 100%;
-  border-radius: 10px;
 }
 </style>

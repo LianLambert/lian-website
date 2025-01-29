@@ -5,10 +5,10 @@
         <!-- media -->
         <div @onClick="isHovering = false" class="project-media centered">
           <!-- Show image or video based on hover -->
-          <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
-            <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
-            <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline ></video>
-          </a>
+            <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
+              <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
+              <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline ></video>
+            </a>
         </div>
 
         <!-- details -->
@@ -79,12 +79,36 @@ const props = defineProps({
   },
 });
 
+window.addEventListener("load", equalizeProjectHeights);
+window.addEventListener("resize", equalizeProjectHeights);
+
 const isHovering = ref(false);
 
 function pauseAllProjectVideos() {
   const videos = document.querySelectorAll('.project-video');
   videos.forEach((video) => {
     video.pause();
+  });
+}
+
+function equalizeProjectHeights() {
+  const projectEntries = document.querySelectorAll(".project-entry");
+  if (projectEntries.length === 0) return;
+
+  let maxHeight = 0;
+
+  // Find the tallest .project-entry
+  projectEntries.forEach(entry => {
+    entry.style.minHeight = ""; // Reset min-height before measuring
+    const height = entry.offsetHeight;
+    if (height > maxHeight) {
+      maxHeight = height;
+    }
+  });
+
+  // Apply the tallest height to all .project-entry elements
+  projectEntries.forEach(entry => {
+    entry.style.minHeight = `${maxHeight}px`;
   });
 }
 </script>

@@ -81,7 +81,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight -1}px`;
   }
 
   // closes navbar if user clicks outside it

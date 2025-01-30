@@ -98,7 +98,7 @@ onUnmounted(() => {
 window.addEventListener("scroll", () => {
   // find active section based on how scrolled down we are
   sectionElements.value.forEach((section) => {
-    if (window.scrollY >= section.offsetTop - section.clientHeight / 2) {
+    if (window.scrollY >= section.offsetTop - section.clientHeight / 3) {
       currentSection.value = section.id;
     }
   });
@@ -111,6 +111,7 @@ window.addEventListener("scroll", () => {
         activeNavLink.classList.remove("active");
       }
       navLink.classList.add("active");
+      window.history.replaceState(null, null, `#${currentSection.value}`);
     }
   });
 });

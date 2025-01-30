@@ -31,9 +31,13 @@ defineProps({
   padding: 7px;
   margin: 2px;
   border-radius: 3px;
+  color: var(--medium-purple);
+  background-color: var(--dark-purple);
+
 
   &:hover {
-    background-color: #f4f1f1;
+    filter: brightness(120%);
+    font-weight: 700;
   }
 }
 </style>

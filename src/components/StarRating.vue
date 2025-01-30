@@ -14,11 +14,11 @@ defineProps({
   },
   filledColor: {
     type: String,
-    default: "#FFD700",
+    default: "#bf8cbf",
   },
   emptyColor: {
     type: String,
-    default: "#CCCCCC",
+    default: "#414141",
   },
 });
 

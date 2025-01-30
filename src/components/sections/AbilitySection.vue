@@ -1,9 +1,10 @@
 <template>
   <section id="ability" class="section centered">
     <div id="ability-container">
-      <div><h1 class="h1-light-bg">Abilities</h1></div>
+      <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
       <div v-for="(category, index) in categories" :key="index" class="mb-4">
-        <h2 class="h2-light-bg">{{ category.title }}</h2>
+        <hr class="horizontal-divider" />
+        <div class="d-flex"><h2 class="h2-dark-bg mb-3">{{category.title}}</h2></div>
         <div class="row" style="padding: 0; margin: 0">
           <div v-for="(rating, skill) in category.items" :key="skill" class="col-12 col-md-6">
             <AbilityRating :ability="skill" :rating="rating" />
@@ -67,12 +68,19 @@ const categories = [
 
 <style scoped lang="scss">
 #ability {
-  background-color: #ebeaea;
+  background-color: var(--dark-purple);
   padding: 4vw 2vw;
 }
 
 #ability-container {
+  padding: 20px 10px;
   max-width: 900px;
+}
+
+.horizontal-divider {
+  border-top: 3px solid var(--lightest-purple);
+  width: 100%;
+  margin: 20px 0;
 }
 
 @media (max-width: 768px) {

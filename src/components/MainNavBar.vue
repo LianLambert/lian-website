@@ -1,8 +1,8 @@
 <template>
   <b-navbar id="nav-all" toggleable="lg" variant="dark" style="background-color: black !important">
     <!-- Logo -->
-    <b-navbar-brand href="#about">
-      <img src="/logo-white.png" id="logo" alt="logo" />
+    <b-navbar-brand id="nav-brand" href="#about">
+      <img src="../images/LL.svg" alt="toggle" id="logo" />
     </b-navbar-brand>
 
     <!-- Toggle -->
@@ -11,7 +11,7 @@
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
-    <b-collapse id="nav-content" is-nav v-model="isNavExpanded" @mouseenter="openNavbar" @mouseleave="closeNavbar">
+    <b-collapse id="nav-content" is-nav v-model="isNavExpanded" v-on="isNavExpanded ? { mouseenter: openNavbar, mouseleave: closeNavbar } : {}">
       <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
@@ -24,22 +24,16 @@
 
         <!-- Social Icons -->
         <div id="nav-icons-container" class="centered">
-          <div class="nav-icon-container">
-            <a href="/Lian_Lambert_Resume_2025.pdf" target="_blank">
-              <img src="../images/resume_white.svg" alt="Resume" />
-            </a>
-          </div>
-          <div class="nav-icon-container">
-            <a href="https://github.com/LianLambert" target="_blank">
-              <img src="../images/github_white.svg" alt="GitHub" />
-            </a>
-          </div>
-          <div class="nav-icon-container">
-            <a href="https://www.linkedin.com/in/lian-lambert/" target="_blank">
-              <img src="../images/linkedin_white.svg" alt="LinkedIn" />
-            </a>
-          </div>
-        </div>
+          <a class="nav-icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
+            <img src="../images/resume_white.svg" class="nav-icon" />
+          </a>
+          <a class="nav-icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
+            <img src="../images/github_white.svg" class="nav-icon" />
+          </a>
+          <a class="nav-icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
+            <img src="../images/linkedin_white.svg" class="nav-icon" />
+          </a>
+      </div>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -141,20 +135,25 @@ window.addEventListener("scroll", () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 5px;
-  margin: 15px;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
   transition: all 0.2s;
 
   &:hover {
-    filter: brightness(70%);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    background-color: white;
+
+    .nav-icon {
+      filter: brightness(0) saturate(100%);
+    }
   }
 }
 
-.nav-icon-container > a > img {
+.nav-icon {
   height: 30px;
   width: auto;
-  transform: scale(1.1);
 }
 
 #nav-links-container > li > a {
@@ -163,11 +162,16 @@ window.addEventListener("scroll", () => {
   transition: all 0.2s;
   padding: 10px;
   width: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
   &:hover,
   &.active {
     color: white;
     transform: scale(1.05);
+  }
+
+  &.active {
+    text-transform: uppercase;
   }
 }
 
@@ -184,20 +188,8 @@ window.addEventListener("scroll", () => {
   }
 }
 
-#logo {
-  width: auto;
-  height: 40px;
-  margin: 10px;
-  transition: margin 0.4s;
-
-  &:hover {
-    filter: brightness(70%);
-    transform: scale(1.05);
-  }
-}
-
 @media (min-width: 992px) {
-  #logo {
+  #nav-brand {
     margin-left: 6vw;
     margin-right: 6vw;
   }
@@ -225,6 +217,30 @@ window.addEventListener("scroll", () => {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+#logo {
+  height: 45px;
+  width: 45px;
+}
+
+#nav-brand {
+  color: white; 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+  font-weight: 1000;
+  transform: rotate(-1.5deg);
+  border-radius: 5px;
+  padding: 3px 8px;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: white;
+
+    #logo {
+      filter: brightness(0) saturate(100%);
+    }
   }
 }
 </style>

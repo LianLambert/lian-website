@@ -25,7 +25,7 @@
         <!-- Social Icons -->
         <div id="nav-icons-container" class="centered">
           <a class="nav-icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
-            <img src="../images/resume_white.svg" class="nav-icon" />
+            <img src="../images/resume.svg" class="nav-icon" />
           </a>
           <a class="nav-icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
             <img src="../images/github_white.svg" class="nav-icon" />

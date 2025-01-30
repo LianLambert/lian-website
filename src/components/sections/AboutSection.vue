@@ -24,7 +24,7 @@
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
-              <img src="../../images/resume_white.svg" class="icon" />
+              <img src="../../images/resume.svg" class="icon" />
             </a>
             <a class="icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
               <img src="../../images/github_white.svg" class="icon" />

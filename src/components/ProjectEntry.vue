@@ -24,10 +24,10 @@
               Watch Demo
             </a>
             <a v-if="props.githubLink" :href="props.githubLink" target="_blank" class="project-link centered">
-              <img src="../images/github_white.svg" alt="github" class="project-entry-icon"/>
+              <img src="../images/github.svg" alt="github" class="project-entry-icon"/>
             </a>
             <a v-if="props.otherLink" :href="props.otherLink" target="_blank" class="project-link centered">
-              <img src="../images/link_white.svg" alt="link" class="project-entry-icon"/>
+              <img src="../images/link.svg" alt="link" class="project-entry-icon"/>
             </a>
           </div>
         </div>

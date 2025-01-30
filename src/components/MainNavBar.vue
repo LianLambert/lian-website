@@ -7,7 +7,7 @@
 
     <!-- Toggle -->
     <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
-      <img src="../images/hamburger_white.svg" alt="toggle" style="width: 30px; height: auto" />
+      <img src="../images/hamburger.svg" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
@@ -28,10 +28,10 @@
             <img src="../images/resume.svg" class="nav-icon" />
           </a>
           <a class="nav-icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
-            <img src="../images/github_white.svg" class="nav-icon" />
+            <img src="../images/github.svg" class="nav-icon" />
           </a>
           <a class="nav-icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
-            <img src="../images/linkedin_white.svg" class="nav-icon" />
+            <img src="../images/linkedin.svg" class="nav-icon" />
           </a>
       </div>
       </b-navbar-nav>

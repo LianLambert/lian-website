@@ -26,8 +26,8 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "../images/link_white.svg";
-import locationPinIcon from "../images/location-pin_white.svg";
+import linkIcon from "../images/link.svg";
+import locationPinIcon from "../images/location-pin.svg";
 import { defineProps, computed } from "vue";
 import { format } from "date-fns";
 

@@ -27,10 +27,10 @@
               <img src="../../images/resume.svg" class="icon" />
             </a>
             <a class="icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
-              <img src="../../images/github_white.svg" class="icon" />
+              <img src="../../images/github.svg" class="icon" />
             </a>
             <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
-              <img src="../../images/linkedin_white.svg" class="icon" />
+              <img src="../../images/linkedin.svg" class="icon" />
             </a>
           </div>
         </div>

@@ -162,14 +162,14 @@ function equalizeProjectHeights() {
 .project-title {
   margin-bottom: 5px;
 
-  &:hover {
+/* to do: decide if I want this   &:hover {
     background-color: var(--off-white);
     color: var(--dark-grey);
     margin: 7px;
     padding: 7px 20px;
     border-radius: 7px;
     transform: scale(1.05);
-  }
+  } */
 }
 
 .project-links-container {
@@ -207,11 +207,11 @@ function equalizeProjectHeights() {
 .project-video {
   height: 150px;
   width: 100%;
-  border-radius: 10px;
 }
 
 .project-image {
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .project-video {

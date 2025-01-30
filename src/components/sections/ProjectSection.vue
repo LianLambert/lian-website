@@ -5,7 +5,7 @@
       <ProjectEntry
         title="Lost At Sea"
         :image="LostAtSea"
-        description="A minesweeper inspired game with a nautical twist! Use lighthouses to search the sea for lost boats - beware of sharks! Created for McGameJam 2025 and made with Unity (C#) in < 48h."
+        description="A minesweeper inspired game with a nautical twist! Use lighthouses to search the sea for lost boats - beware of sharks! Created for McGameJam 2025 and made with Unity/C# in < 48h."
         primaryLink="https://lianl.itch.io/lost-at-sea"
         demoLink="https://www.youtube.com/watch?v=FVWS2cOupnk&ab_channel=Lian"
         githubLink="https://github.com/LianLambert/Lost-At-Sea-McGameJam2025"
@@ -15,7 +15,7 @@
       <ProjectEntry
         title="Commit2Gather"
         :image="Commit2Gather"
-        description="An appointment booking software to help McGill University students and staff manage office hours and meetings. Created for COMP 307 - Principles of Web Development in Fall 2024."
+        description="An appointment booking software to help McGill University students and staff manage office hours and meetings. Created for COMP 307 - Principles of Web Development using the MERN stack in Fall 2024."
         primaryLink="https://github.com/lil1an/commit2gather"
         demoLink="https://www.youtube.com/watch?v=-zRBUqTmG-U&t=3s&ab_channel=Lian"
         githubLink="https://github.com/lil1an/commit2gather"
@@ -24,7 +24,7 @@
       <ProjectEntry
         title="The Adventures of Super Cool Carrot Rocket Chessmaster Girl"
         :image="TASCCRCG"
-        description="A 2D pixel art shoot’em up game following the theme 'Contraption'! Created for McGameJam 2024 and made with Unity (C#) in < 48h."
+        description="A 2D pixel art shoot’em up game following the theme 'Contraption'! Created for McGameJam 2024 and made with Unity/C# in < 48h."
         primaryLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
         demoLink="https://www.youtube.com/watch?v=ISyCelCeTNc&t=9s&ab_channel=Lian"
         githubLink="https://github.com/LianLambert/The-Adventures-of-Super-Cool-Carrot-Rocket-Chessmaster-Girl-McGameJam2024"
@@ -39,25 +39,24 @@
         primaryLink="https://docs.google.com/presentation/d/1hII6qBH_dLbKPqPi4oqcR_595N9Twu2WiQ7Q0VdtBjU/edit#slide=id.gace710277d_0_491"
         otherLink="https://docs.google.com/presentation/d/1hII6qBH_dLbKPqPi4oqcR_595N9Twu2WiQ7Q0VdtBjU/edit#slide=id.gace710277d_0_491"
       />
-      <!-- <ProjectEntry
+      <ProjectEntry
         title="FPS Unity Practice"
         :image="FPSUnity"
-        description="TO DO"
-        primaryLink="TO DO"
-        githubLink="TO DO"
-        demoLink="TO DO"
+        description="A unity project featuring free exploration, combat, canyon and goal zones as well as randomly generated safe and deadly paths. Built for COMP 521 - Modern Computer Games using Unity/C#."
+        primaryLink="https://github.com/LianLambert/FPS-Unity-Assignment"
+        githubLink="https://github.com/LianLambert/FPS-Unity-Assignment"
+        demoLink="https://www.youtube.com/watch?v=5vyfgUvrMes&ab_channel=Lian"
         :demo-video="FPSUnityVideo"
       />
-      
-      need to fix video for this one
       <ProjectEntry
         title="Leaping Fish Verlets"
         :image="LeapingFishVerlets"
-        description="TO DO"
-        primaryLink="TO DO"
-        demoLink="TO DO"
+        description="A Unity/C# project built for COMP 521 - Modern Computer Games, featuring hand-coded physics and collisions, randomized fish trajectories, and Verlet integration for body movement."
+        primaryLink="https://github.com/LianLambert/Leaping-Fish-Verlet-Assignment"
+        githubLink="https://github.com/LianLambert/Leaping-Fish-Verlet-Assignment"
+        demoLink="https://www.youtube.com/watch?v=V70TlsH6XvI&ab_channel=Lian"
         :demo-video="LeapingFishVerletsVideo" 
-      /> -->
+      />
     </div>
   </section>
 </template>
@@ -70,7 +69,7 @@ import Commit2Gather from "../../images/Commit2Gather.png";
 import TASCCRCG from "../../images/TASCCRCG.png";
 import Portfolio from "../../images/portfolio.png";
 import FPSUnity from "../../images/fps-unity.png";
-import LeapingFishVerlets from "../../images/portfolio.png";
+import LeapingFishVerlets from "../../images/leaping-fish-verlets.png";
 
 // project videos
 import LostAtSeaVideo from "../../videos/LostAtSea-preview.mp4";

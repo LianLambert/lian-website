@@ -129,6 +129,7 @@ window.addEventListener("scroll", () => {
   justify-content: center;
   align-items: center;
   z-index: 5;
+  transition: background-color 0.3s ease, filter 0.3s ease;
 }
 
 .nav-icon-container {

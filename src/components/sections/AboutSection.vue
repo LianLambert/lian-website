@@ -81,7 +81,7 @@ onMounted(() => {
   position: relative;
   z-index: 10;
   padding: 5vw;
-  background-image: url("../../images/shapes00.png");
+  background-image: url("../../images/shapes.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

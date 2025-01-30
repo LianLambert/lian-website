@@ -205,8 +205,8 @@ function equalizeProjectHeights() {
 
 .project-image,
 .project-video {
-  max-height: 150px;
-  max-width: 100%;
+  height: 150px;
+  width: 100%;
   border-radius: 10px;
 }
 

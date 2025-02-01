@@ -122,6 +122,7 @@ const timeAtPosition = computed(() => {
   height: 17px;
   margin-right: 2px;
   width: auto;
+  filter: brightness(0) saturate(100%) invert(91%) sepia(88%) saturate(7026%) hue-rotate(216deg) brightness(80%) contrast(84%);
 }
 
 .section-title {

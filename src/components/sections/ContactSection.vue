@@ -1,28 +1,26 @@
 <template>
   <section id="contact" class="section centered">
-    <div id="contact-container"  class="row">
+    <div id="contact-container" class="row">
       <div><h1 class="h1-light-bg" style="color: black">Contact</h1></div>
       <div class="d-flex align-items-center justify-content-center">
         <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
           <img src="../../images/email.svg" class="icon" />
         </a>
         <div class="icon-container" @click="copyPhoneNumber">
-          <img src="../../images/phone.svg" class="icon"/>
+          <img src="../../images/phone.svg" class="icon" />
         </div>
         <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
           <img src="../../images/linkedin.svg" class="icon" />
         </a>
-        <div v-if="notificationVisible" class="notification">
-          Phone number copied!
-        </div>
+        <div v-if="notificationVisible" class="notification">Phone number copied!</div>
       </div>
     </div>
   </section>
 </template>
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const phoneNumber = '647-228-5779';
+const phoneNumber = "647-228-5779";
 const notificationVisible = ref(true);
 
 const copyPhoneNumber = () => {
@@ -32,8 +30,6 @@ const copyPhoneNumber = () => {
     setTimeout(() => {
       notificationVisible.value = false;
     }, 2000);
-  }).catch((error) => {
-    console.error('Failed to copy phone number: ', error);
   });
 };
 </script>

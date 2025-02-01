@@ -30,7 +30,6 @@
         githubLink="https://github.com/LianLambert/The-Adventures-of-Super-Cool-Carrot-Rocket-Chessmaster-Girl-McGameJam2024"
         otherLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
         :demo-video="TASCCRCGVideo"
-        
       />
       <ProjectEntry
         title="Game Design Portfolio"
@@ -55,7 +54,7 @@
         primaryLink="https://github.com/LianLambert/Leaping-Fish-Verlet-Assignment"
         githubLink="https://github.com/LianLambert/Leaping-Fish-Verlet-Assignment"
         demoLink="https://www.youtube.com/watch?v=V70TlsH6XvI&ab_channel=Lian"
-        :demo-video="LeapingFishVerletsVideo" 
+        :demo-video="LeapingFishVerletsVideo"
       />
     </div>
   </section>
@@ -77,7 +76,6 @@ import Commit2GatherVideo from "../../videos/Commit2Gather-preview.mp4";
 import TASCCRCGVideo from "../../videos/TASCCRCG-preview.mp4";
 import FPSUnityVideo from "../../videos/FPSUnity-preview.mp4";
 import LeapingFishVerletsVideo from "../../videos/LeapingFishVerlets-preview.mp4";
-
 </script>
 <style scoped lang="scss">
 #project {

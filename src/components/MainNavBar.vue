@@ -33,7 +33,7 @@
           <a class="nav-icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
             <img src="../images/linkedin.svg" class="nav-icon" />
           </a>
-      </div>
+        </div>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -72,7 +72,7 @@ const handleResize = () => {
   if (window.innerWidth >= 992) {
     closeNavbar();
   }
-}
+};
 
 onMounted(() => {
   navbar.value = document.getElementById("nav-all");
@@ -81,7 +81,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight -1}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 1}px`;
   }
 
   // closes navbar if user clicks outside it
@@ -130,7 +130,9 @@ window.addEventListener("scroll", () => {
   justify-content: center;
   align-items: center;
   z-index: 5;
-  transition: background-color 0.3s ease, filter 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    filter 0.3s ease;
 }
 
 .nav-icon-container {
@@ -164,7 +166,7 @@ window.addEventListener("scroll", () => {
   transition: all 0.2s;
   padding: 10px;
   width: 100%;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 
   &:hover,
   &.active {
@@ -228,8 +230,8 @@ window.addEventListener("scroll", () => {
 }
 
 #nav-brand {
-  color: white; 
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 35px;
   font-weight: 1000;
   transform: rotate(-1.5deg);

@@ -6,7 +6,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import StarRating from "./StarRating.vue";
 
 defineProps({
@@ -33,7 +32,6 @@ defineProps({
   border-radius: 3px;
   color: var(--medium-purple);
   background-color: var(--dark-purple);
-
 
   &:hover {
     filter: brightness(120%);

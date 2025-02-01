@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup>
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 
 defineProps({
   rating: {

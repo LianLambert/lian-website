@@ -1,9 +1,13 @@
 <template>
   <div class="experience-entry row g-0">
     <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
-      <a :href="props.link" target="_blank"><h3 class="section-title">{{ company }}</h3></a>
+      <a :href="props.link" target="_blank">
+        <h3 class="section-title">{{ company }}</h3>
+      </a>
       <div style="margin-bottom: 3px">{{ formattedStartDate }} - {{ formattedEndDate }}</div>
-      <div v-if="props.showTimeAtPosition"><b>{{ timeAtPosition }}</b></div>
+      <div v-if="props.showTimeAtPosition">
+        <b>{{ timeAtPosition }}</b>
+      </div>
     </div>
     <div class="col-12 col-md-8 left-align-text" style="padding: 0">
       <h4 class="section-title">{{ position }}</h4>
@@ -28,7 +32,7 @@
 <script setup>
 import linkIcon from "../images/link.svg";
 import locationPinIcon from "../images/location-pin.svg";
-import { defineProps, computed } from "vue";
+import { computed } from "vue";
 import { format } from "date-fns";
 
 const props = defineProps({

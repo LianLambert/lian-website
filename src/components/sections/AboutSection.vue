@@ -1,10 +1,11 @@
 <template>
   <section id="about" class="section">
     <img id="lian-pose" :src="LianPose" alt="Lian striking a pose" />
-    <div id="text-container" :class="{ 'showAnimationPulse': showAnimationPulse }">
+    <div id="text-container" :class="{ showAnimationPulse: showAnimationPulse }">
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
       <div class="row">
         <div class="col-12 col-md-4 details-group">
+          <!-- eslint-disable-next-line -->
           <p>I'm a recent graduate from<br class="conditional-br"><b>McGill</b> with a double major in <b>Software&nbsp;Engineering</b> and <b>Psychology</b>. I love blending tech with human behavior to create designs that make an impact! I’m passionate about <b>web&nbsp;dev</b>, &nbsp;<b>game&nbsp;dev</b> and anything that lets me use my creativity!</p>
         </div>
         <div class="col-12 col-md-4"></div>
@@ -15,7 +16,9 @@
           </div>
           <div class="details-group">
             <span class="details-label">Age: &nbsp;</span>
-            <span id="myAge"><b>{{ age }}&nbsp;years</b></span>
+            <span id="myAge">
+              <b>{{ age }}&nbsp;years</b>
+            </span>
           </div>
           <div class="details-group">
             <span class="details-label">Location: &nbsp;</span>

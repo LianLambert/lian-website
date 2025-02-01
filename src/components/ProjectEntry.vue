@@ -5,29 +5,28 @@
         <!-- media -->
         <div @onClick="isHovering = false" class="project-media centered">
           <!-- Show image or video based on hover -->
-            <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
-              <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
-              <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline ></video>
-            </a>
+          <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
+            <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
+            <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline></video>
+          </a>
         </div>
 
         <!-- details -->
         <div class="project-details">
-
           <!-- title and description -->
-          <h3 class="project-title"><a :href="props.primaryLink">{{ title }}</a></h3>
+          <h3 class="project-title">
+            <a :href="props.primaryLink">{{ title }}</a>
+          </h3>
           <div>{{ description }}</div>
 
           <!-- links -->
           <div class="project-links-container">
-            <a v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">
-              Watch Demo
-            </a>
+            <a v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">Watch Demo</a>
             <a v-if="props.githubLink" :href="props.githubLink" target="_blank" class="project-link centered">
-              <img src="../images/github.svg" alt="github" class="project-entry-icon"/>
+              <img src="../images/github.svg" alt="github" class="project-entry-icon" />
             </a>
             <a v-if="props.otherLink" :href="props.otherLink" target="_blank" class="project-link centered">
-              <img src="../images/link.svg" alt="link" class="project-entry-icon"/>
+              <img src="../images/link.svg" alt="link" class="project-entry-icon" />
             </a>
           </div>
         </div>
@@ -42,7 +41,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, ref } from "vue";
+import { ref } from "vue";
 
 const props = defineProps({
   title: {
@@ -85,7 +84,7 @@ window.addEventListener("resize", equalizeProjectHeights);
 const isHovering = ref(false);
 
 function pauseAllProjectVideos() {
-  const videos = document.querySelectorAll('.project-video');
+  const videos = document.querySelectorAll(".project-video");
   videos.forEach((video) => {
     video.pause();
   });
@@ -93,21 +92,23 @@ function pauseAllProjectVideos() {
 
 function equalizeProjectHeights() {
   const projectEntries = document.querySelectorAll(".project-entry");
-  if (projectEntries.length === 0) return;
+  if (projectEntries.length === 0) {
+    return;
+  }
 
   let maxHeight = 0;
 
-  // Find the tallest .project-entry
-  projectEntries.forEach(entry => {
-    entry.style.minHeight = ""; // Reset min-height before measuring
+  // find tallest height
+  projectEntries.forEach((entry) => {
+    entry.style.minHeight = "";
     const height = entry.offsetHeight;
     if (height > maxHeight) {
       maxHeight = height;
     }
   });
 
-  // Apply the tallest height to all .project-entry elements
-  projectEntries.forEach(entry => {
+  // apply tallest height to all
+  projectEntries.forEach((entry) => {
     entry.style.minHeight = `${maxHeight}px`;
   });
 }
@@ -162,7 +163,7 @@ function equalizeProjectHeights() {
 .project-title {
   margin-bottom: 5px;
 
-/* to do: decide if I want this   &:hover {
+  /* to do: decide if I want this   &:hover {
     background-color: var(--off-white);
     color: var(--dark-grey);
     margin: 7px;

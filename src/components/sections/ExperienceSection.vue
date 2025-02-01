@@ -1,7 +1,10 @@
 <template>
   <section id="experience" class="section centered">
     <div id="experience-container">
+      <!-- Title -->
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Experience</h1>
+
+      <!-- Education -->
       <hr class="horizontal-divider" />
       <div class="d-flex"><h2 class="h2-dark-bg">Education</h2></div>
       <ExperienceEntry
@@ -13,6 +16,8 @@
         location="Montreal, QB"
         :showTimeAtPosition="false"
       />
+
+      <!-- Work -->
       <hr class="horizontal-divider" />
       <div class="d-flex"><h2 class="h2-dark-bg">Work</h2></div>
       <ExperienceEntry

@@ -91,10 +91,6 @@ onMounted(() => {
   window.addEventListener("resize", handleResize);
 });
 
-onUnmounted(() => {
-  document.removeEventListener("click", handleClickOutsideNav);
-});
-
 window.addEventListener("scroll", () => {
   // find active section based on how scrolled down we are
   sectionElements.value.forEach((section) => {

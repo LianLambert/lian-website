@@ -1,5 +1,7 @@
 <template>
   <div class="experience-entry row g-0">
+
+    <!-- Company/Time -->
     <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
       <a :href="props.link" target="_blank">
         <h3 class="section-title">{{ company }}</h3>
@@ -9,6 +11,8 @@
         <b>{{ timeAtPosition }}</b>
       </div>
     </div>
+
+    <!-- Description/Location/Link -->
     <div class="col-12 col-md-8 left-align-text" style="padding: 0">
       <h4 class="section-title">{{ position }}</h4>
       <div v-html="description" class="my-2"></div>

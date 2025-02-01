@@ -1,7 +1,11 @@
 <template>
   <section id="project" class="section centered">
     <div id="project-container" class="row">
+      <!-- Title -->
       <div><h1 class="h1-light-bg" style="color: black">Projects</h1></div>
+      <hr class="horizontal-divider" />
+
+      <!-- Projects -->
       <ProjectEntry
         title="Lost At Sea"
         :image="LostAtSea"
@@ -91,5 +95,11 @@ import LeapingFishVerletsVideo from "../../videos/LeapingFishVerlets-preview.mp4
   width: 100%;
   max-width: 1100px;
   padding: 20px 0px;
+}
+
+.horizontal-divider {
+  border-top: 3px solid var(--dark-grey);
+  width: 100%;
+  margin: 20px 0;
 }
 </style>

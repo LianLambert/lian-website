@@ -1,14 +1,28 @@
 <template>
   <section id="about" class="section">
+
+    <!-- Image -->
     <img id="lian-pose" :src="LianPose" alt="Lian striking a pose" />
+
+    <!-- Text-Container -->
     <div id="text-container" :class="{ showAnimationPulse: showAnimationPulse }">
+
+      <!-- Hey There! -->
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
+
+      <!-- Other Text -->
       <div class="row">
+
+        <!-- Bio -->
         <div class="col-12 col-md-4 details-group">
           <!-- eslint-disable-next-line -->
           <p>I'm a recent graduate from<br class="conditional-br"><b>McGill</b> with a double major in <b>Software&nbsp;Engineering</b> and <b>Psychology</b>. I love blending tech with human behavior to create designs that make an impact! I’m passionate about <b>web&nbsp;dev</b>, &nbsp;<b>game&nbsp;dev</b> and anything that lets me use my creativity!</p>
         </div>
+
+        <!-- Spacer -->
         <div class="col-12 col-md-4"></div>
+
+        <!-- Stats -->
         <div class="col-12 col-md-4" style="padding: 0">
           <div class="details-group">
             <span class="details-label">Name: &nbsp;</span>
@@ -24,6 +38,8 @@
             <span class="details-label">Location: &nbsp;</span>
             <span><b>Montreal,&nbsp;QC</b></span>
           </div>
+
+          <!-- Icons -->
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
@@ -63,6 +79,7 @@ onMounted(() => {
     aboutSection.value.style.height = `${viewportHeight - 35}px`;
   }
 
+  // pulse textbox on load
   setTimeout(() => {
     showAnimationPulse.value = true;
 

@@ -2,24 +2,24 @@
   <div class="col-12 col-sm-6 col-lg-4 p-0">
     <div class="project-entry" @mouseover="isHovering = true" @mouseleave="isHovering = false" @mousedown="pauseAllProjectVideos">
       <div class="">
-        <!-- media -->
+        <!-- Media -->
         <div @onClick="isHovering = false" class="project-media centered">
-          <!-- Show image or video based on hover -->
+          <!-- show image or video based on hover -->
           <a :href="props.demoLink || props.primaryLink" target="_blank" rel="noopener noreferrer" class="centered w-100">
             <img v-if="!isHovering || !props.demoVideo" :src="image" class="project-image" />
             <video v-else :src="props.demoVideo" class="project-video" autoplay playsinline></video>
           </a>
         </div>
 
-        <!-- details -->
+        <!-- Details -->
         <div class="project-details">
-          <!-- title and description -->
+          <!-- Title and Description -->
           <h3 class="project-title">
             <a :href="props.primaryLink">{{ title }}</a>
           </h3>
           <div>{{ description }}</div>
 
-          <!-- links -->
+          <!-- Links -->
           <div class="project-links-container">
             <a v-if="props.demoLink" :href="props.demoLink" target="_blank" class="project-link centered">Watch Demo</a>
             <a v-if="props.githubLink" :href="props.githubLink" target="_blank" class="project-link centered">
@@ -32,10 +32,10 @@
         </div>
       </div>
       <!-- maybe bring back one day
-            <div class="hashtags">
-              <span style="color: var(--dark-purple)"> #unity </span>
-              <span style="color: var(--darkest-purple)"> #gamedev </span>
-            </div> 
+        <div class="hashtags">
+          <span style="color: var(--dark-purple)"> #unity </span>
+          <span style="color: var(--darkest-purple)"> #gamedev </span>
+        </div> 
       -->
     </div>
   </div>
@@ -83,6 +83,7 @@ window.addEventListener("resize", equalizeProjectHeights);
 
 const isHovering = ref(false);
 
+// ensures sound doesn't continue when link clicked
 function pauseAllProjectVideos() {
   const videos = document.querySelectorAll(".project-video");
   videos.forEach((video) => {

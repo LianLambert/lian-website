@@ -1,12 +1,16 @@
 <template>
   <section id="ability" class="section centered">
     <div id="ability-container">
+      <!-- Title -->
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
+      <!-- Categories -->
       <div v-for="(category, index) in categories" :key="index" class="mb-4">
+        <!-- Category Titles -->
         <hr class="horizontal-divider" />
         <div class="d-flex">
           <h2 class="h2-dark-bg mb-3">{{ category.title }}</h2>
         </div>
+        <!-- Category Ratings -->
         <div class="row" style="padding: 0; margin: 0">
           <div v-for="(rating, skill) in category.items" :key="skill" class="col-12 col-md-6">
             <AbilityRating :ability="skill" :rating="rating" />

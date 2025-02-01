@@ -131,23 +131,31 @@ window.addEventListener("scroll", () => {
     filter 0.3s ease;
 }
 
+#nav-icons-container:hover {
+  transform: scale(1.1);
+
+  .nav-icon-container {
+    background-color: white;
+  }
+
+  .nav-icon {
+    filter: brightness(0) saturate(100%);
+  }
+}
+
 .nav-icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 25px;
+  margin: 0 7px;
   border-radius: 5px;
-  width: 45px;
-  height: 45px;
-  margin: 10px;
+  width: 40px;
+  height: 40px;
   transition: all 0.2s;
 
   &:hover {
     transform: scale(1.1);
-    background-color: white;
-
-    .nav-icon {
-      filter: brightness(0) saturate(100%);
-    }
   }
 }
 

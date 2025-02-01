@@ -34,8 +34,9 @@ defineProps({
   background-color: var(--dark-purple);
 
   &:hover {
-    filter: brightness(120%);
+    filter: brightness(130%);
     font-weight: 700;
+    transform: scale(1.1);
   }
 }
 </style>

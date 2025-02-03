@@ -1,5 +1,5 @@
 <template>
-  <section id="ability" class="section centered">
+  <section id="abilities" class="section centered">
     <div id="ability-container">
       <!-- Title -->
       <h1 class="h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
@@ -74,7 +74,7 @@ const categories = [
 </script>
 
 <style scoped lang="scss">
-#ability {
+#abilities {
   background-color: var(--dark-purple);
   padding: 4vw 2vw;
 }

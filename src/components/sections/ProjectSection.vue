@@ -1,5 +1,5 @@
 <template>
-  <section id="project" class="section centered">
+  <section id="projects" class="section centered">
     <div id="project-container" class="row">
       <!-- Title -->
       <div><h1 class="h1-light-bg" style="background-color: var(--off-white); color: black">Projects</h1></div>
@@ -83,7 +83,7 @@ import FPSUnityVideo from "../../videos/FPSUnity-preview.mp4";
 import LeapingFishVerletsVideo from "../../videos/LeapingFishVerlets-preview.mp4";
 </script>
 <style scoped lang="scss">
-#project {
+#projects {
   padding: 4vw 2vw;
   background-color: var(--off-white);
 }

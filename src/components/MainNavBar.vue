@@ -1,7 +1,7 @@
 <template>
   <b-navbar id="nav-all" toggleable="lg" variant="dark" style="background-color: black !important">
     <!-- Logo -->
-    <b-navbar-brand id="nav-brand" href="#about">
+    <b-navbar-brand id="nav-brand" @click.prevent="scrollToSection('about')">
       <img src="../images/LL.svg" alt="toggle" id="logo" />
     </b-navbar-brand>
 
@@ -15,11 +15,11 @@
       <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
-          <b-nav-item class="nav-link" href="#about" @click.prevent="scrollToSection('about')" active>about</b-nav-item>
-          <b-nav-item class="nav-link" href="#experience" @click.prevent="scrollToSection('experience')">experience</b-nav-item>
-          <b-nav-item class="nav-link" href="#project" @click.prevent="scrollToSection('project')">projects</b-nav-item>
-          <b-nav-item class="nav-link" href="#ability" @click.prevent="scrollToSection('ability')">abilities</b-nav-item>
-          <b-nav-item class="nav-link" href="#contact" @click.prevent="scrollToSection('contact')">contact</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('about')" active>about</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('experience')">experience</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('project')">projects</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('ability')">abilities</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('contact')">contact</b-nav-item>
         </div>
 
         <!-- Social Icons -->
@@ -82,7 +82,6 @@ const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
-    window.history.replaceState(null, null, `#${sectionId}`);
   }
 };
 
@@ -113,13 +112,12 @@ window.addEventListener("scroll", () => {
 
   // clear previous active tag then set to currect section
   navLinkElements.value.forEach((navLink) => {
-    if (navLink && navLink.href && navLink.href.includes(currentSection.value)) {
+    if (navLink.textContent.toLowerCase() === currentSection.value) {
       const activeNavLink = document.querySelector(".active");
       if (activeNavLink) {
         activeNavLink.classList.remove("active");
       }
       navLink.classList.add("active");
-      window.history.replaceState(null, null, `#${currentSection.value}`);
     }
   });
 });

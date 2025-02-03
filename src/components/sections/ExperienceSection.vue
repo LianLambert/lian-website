@@ -1,8 +1,9 @@
 <template>
   <section id="experience" class="section centered">
     <div id="experience-container">
-      <!-- Title -->
+      <!-- Title and  -->
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Experience</h1>
+      <p class="quote-purple">"Life is either a daring adventure, or nothing at all" - Helen Keller</p>
 
       <!-- Education -->
       <hr class="horizontal-divider" />

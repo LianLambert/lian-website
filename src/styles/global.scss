@@ -63,7 +63,7 @@ h1 {
   font-size: 70px;
   font-weight: 1000;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-radius: 10px;
   color: var(--medium-purple);
 }
@@ -77,7 +77,7 @@ h1 {
 
 .h1-light-bg:hover {
   color: black;
-  transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.1) rotate(-2deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -112,4 +112,16 @@ h4 {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.2;
+}
+
+.quote-purple {
+  color: var(--medium-purple);
+  font-style: italic;
+  font-size: 18px;
+}
+
+.quote-grey {
+  color: var(--dark-grey);
+  font-style: italic;
+  font-size: 18px;
 }

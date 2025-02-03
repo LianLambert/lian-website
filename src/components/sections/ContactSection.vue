@@ -1,7 +1,12 @@
 <template>
   <section id="contact" class="section centered">
     <div id="contact-container" class="row">
-      <div><h1 class="h1-light-bg" style="color: black">Contact</h1></div>
+      <!-- Title -->
+      <div><h1 class="mb-2 h1-light-bg" style="color: black">Contact</h1></div>
+      <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert" - Lian Lambert</p>
+      <hr class="horizontal-divider" />
+
+      <!-- to do: -->
       <div class="d-flex align-items-center justify-content-center">
         <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
           <img src="../../images/email.svg" class="icon" />
@@ -107,5 +112,11 @@ const copyPhoneNumber = () => {
   font-size: 14px;
   opacity: 0;
   animation: fadeInOut 2s forwards;
+}
+
+.horizontal-divider {
+  border-top: 3px solid var(--dark-grey);
+  width: 100%;
+  margin: 20px 0;
 }
 </style>

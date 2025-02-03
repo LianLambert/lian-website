@@ -3,6 +3,7 @@
     <div id="ability-container">
       <!-- Title -->
       <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
+      <p class="quote-purple">"I like to learn. That's an art and a science." - Katherine Johnson</p>
       <!-- Categories -->
       <div v-for="(category, index) in categories" :key="index" class="mb-4">
         <!-- Category Titles -->

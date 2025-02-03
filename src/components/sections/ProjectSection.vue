@@ -2,7 +2,8 @@
   <section id="project" class="section centered">
     <div id="project-container" class="row">
       <!-- Title -->
-      <div><h1 class="h1-light-bg" style="color: black">Projects</h1></div>
+      <div><h1 class="mb-2 h1-light-bg" style="color: black">Projects</h1></div>
+      <p class="quote-grey">"Your life is your biggest project - make it a masterpiece." - Unknown</p>
       <hr class="horizontal-divider" />
 
       <!-- Projects -->

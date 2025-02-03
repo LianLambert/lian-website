@@ -93,7 +93,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 1}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight -2}px`;
   }
 
   // closes navbar if user clicks outside it
@@ -144,18 +144,6 @@ window.addEventListener("scroll", () => {
     transform 0.3s ease;
 }
 
-#nav-icons-container:hover {
-  transform: scale(1.1);
-
-  .nav-icon-container {
-    background-color: white;
-  }
-
-  .nav-icon {
-    filter: brightness(0) saturate(100%);
-  }
-}
-
 .nav-icon-container {
   display: flex;
   justify-content: center;
@@ -168,7 +156,13 @@ window.addEventListener("scroll", () => {
   transition: all 0.2s;
 
   &:hover {
-    transform: scale(1.1);
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+    background-color: white;
+
+    .nav-icon {
+      filter: brightness(0) saturate(100%);
+    }
   }
 }
 
@@ -225,6 +219,16 @@ window.addEventListener("scroll", () => {
     background-color: #202020;
   }
 
+  #nav-icons-container {
+    width: 100%;
+    height: 70px;
+
+    &:hover {
+      background-color: #202020;
+    }
+  }
+
+
   #nav-links-container,
   #nav-links-container > li,
   #nav-links-container > li > a {
@@ -232,7 +236,8 @@ window.addEventListener("scroll", () => {
   }
 
   #nav-links-container > li,
-  #nav-links-container > li > a {
+  #nav-links-container > li > a,
+  .nav-icons-container {
     height: 70px;
     padding: 0px;
     display: flex;

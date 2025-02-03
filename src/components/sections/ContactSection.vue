@@ -2,7 +2,7 @@
   <section id="contact" class="section centered">
     <div id="contact-container" class="row">
       <!-- Title -->
-      <div><h1 class="h1-light-bg" style="color: black">Contact</h1></div>
+      <div><h1 class="h1-light-bg" style="background-color: var(--off-white); color: black">Contact</h1></div>
       <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert" - Lian Lambert</p>
       <hr class="horizontal-divider" />
 
@@ -43,6 +43,7 @@ const copyPhoneNumber = () => {
 #contact {
   padding: 4vw 2vw;
   color: black;
+  background-color: var(--off-white);
 }
 
 #contact-container {

@@ -15,11 +15,11 @@
       <b-navbar-nav class="centered w-100">
         <!-- Navbar Links -->
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
-          <b-nav-item class="nav-link" href="#about" @click="closeNavbar" active>about</b-nav-item>
-          <b-nav-item class="nav-link" href="#experience" @click="closeNavbar">experience</b-nav-item>
-          <b-nav-item class="nav-link" href="#project" @click="closeNavbar">projects</b-nav-item>
-          <b-nav-item class="nav-link" href="#ability" @click="closeNavbar">abilities</b-nav-item>
-          <b-nav-item class="nav-link" href="#contact" @click="closeNavbar">contact</b-nav-item>
+          <b-nav-item class="nav-link" href="#about" @click.prevent="scrollToSection('about')" active>about</b-nav-item>
+          <b-nav-item class="nav-link" href="#experience" @click.prevent="scrollToSection('experience')">experience</b-nav-item>
+          <b-nav-item class="nav-link" href="#project" @click.prevent="scrollToSection('project')">projects</b-nav-item>
+          <b-nav-item class="nav-link" href="#ability" @click.prevent="scrollToSection('ability')">abilities</b-nav-item>
+          <b-nav-item class="nav-link" href="#contact" @click.prevent="scrollToSection('contact')">contact</b-nav-item>
         </div>
 
         <!-- Social Icons -->
@@ -71,6 +71,18 @@ const handleClickOutsideNav = (event) => {
 const handleResize = () => {
   if (window.innerWidth >= 992) {
     closeNavbar();
+  }
+};
+
+const scrollToSection = (sectionId) => {
+  if (isNavExpanded.value) {
+    closeNavbar();
+  }
+  
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+    window.history.replaceState(null, null, `#${sectionId}`);
   }
 };
 

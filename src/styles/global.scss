@@ -47,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .centered {
   display: flex;
   justify-content: center;
@@ -63,12 +67,13 @@ h1 {
   font-size: 70px;
   font-weight: 1000;
   line-height: 1.5;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   border-radius: 10px;
   color: var(--medium-purple);
 }
 
 .h1-dark-bg:hover {
+  background-color: var(--dark-purple);
   color: white;
   transform: scale(1.1) rotate(-3deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -76,6 +81,7 @@ h1 {
 }
 
 .h1-light-bg:hover {
+  background-color: var(--lightest-grey);
   color: black;
   transform: scale(1.1) rotate(-2deg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);

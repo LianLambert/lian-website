@@ -2,7 +2,7 @@
   <section id="experience" class="section centered">
     <div id="experience-container">
       <!-- Title and  -->
-      <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Experience</h1>
+      <h1 class="h1-dark-bg" style="background-color: var(--dark-purple)">Experience</h1>
       <p class="quote-purple">"Life is either a daring adventure, or nothing at all" - Helen Keller</p>
 
       <!-- Education -->
@@ -74,6 +74,6 @@ import ExperienceEntry from "../ExperienceEntry.vue";
 .horizontal-divider {
   border-top: 3px solid var(--lightest-purple);
   width: 100%;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 </style>

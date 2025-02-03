@@ -2,7 +2,7 @@
   <section id="ability" class="section centered">
     <div id="ability-container">
       <!-- Title -->
-      <h1 class="mb-3 h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
+      <h1 class="h1-dark-bg" style="background-color: var(--dark-purple)">Abilities</h1>
       <p class="quote-purple">"I like to learn. That's an art and a science." - Katherine Johnson</p>
       <!-- Categories -->
       <div v-for="(category, index) in categories" :key="index" class="mb-4">
@@ -87,7 +87,7 @@ const categories = [
 .horizontal-divider {
   border-top: 3px solid var(--lightest-purple);
   width: 100%;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
   <section id="contact" class="section centered">
     <div id="contact-container" class="row">
       <!-- Title -->
-      <div><h1 class="mb-2 h1-light-bg" style="color: black">Contact</h1></div>
+      <div><h1 class="h1-light-bg" style="color: black">Contact</h1></div>
       <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert" - Lian Lambert</p>
       <hr class="horizontal-divider" />
 
@@ -11,13 +11,14 @@
         <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
           <img src="../../images/email.svg" class="icon" />
         </a>
-        <div class="icon-container" @click="copyPhoneNumber">
+        <div class="icon-container position-relative" @click="copyPhoneNumber">
           <img src="../../images/phone.svg" class="icon" />
+          <div v-if="notificationVisible" class="notification">Phone number copied!</div>
         </div>
         <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
           <img src="../../images/linkedin.svg" class="icon" />
         </a>
-        <div v-if="notificationVisible" class="notification">Phone number copied!</div>
+
       </div>
     </div>
   </section>
@@ -26,7 +27,7 @@
 import { ref } from "vue";
 
 const phoneNumber = "647-228-5779";
-const notificationVisible = ref(true);
+const notificationVisible = ref(false);
 
 const copyPhoneNumber = () => {
   navigator.clipboard.writeText(phoneNumber).then(() => {
@@ -54,37 +55,6 @@ const copyPhoneNumber = () => {
   position: relative;
 }
 
-#lian-show {
-  position: absolute;
-  height: 70%;
-  width: auto;
-  left: 70%;
-  bottom: 0%;
-  transform: translateX(-70%);
-  z-index: 100;
-
-  &:hover {
-    filter: brightness(110%);
-  }
-
-  &:hover ~ #text-container {
-    transform: scale(1.1) rotate(-1.5deg);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-
-  @media (max-width: 992px) {
-    &:hover ~ #text-container {
-      transform: scale(1.05) rotate(-1.5deg);
-    }
-  }
-
-  @media (max-width: 767px) {
-    height: auto;
-    max-width: 65%;
-    transform: translateX(-40%);
-  }
-}
-
 .icon-container {
   cursor: pointer;
 
@@ -96,13 +66,13 @@ const copyPhoneNumber = () => {
 .icon {
   filter: brightness(0) saturate(100%);
   width: auto;
-  height: 10vw;
+  height: 9vw;
   margin: 4vw;
 }
 
 .notification {
   position: absolute;
-  bottom: 20px;
+  top: 40%;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
@@ -110,13 +80,14 @@ const copyPhoneNumber = () => {
   padding: 8px 15px;
   border-radius: 5px;
   font-size: 14px;
-  opacity: 0;
+  width: 100%;
+  transition: all 0.3s ease;
   animation: fadeInOut 2s forwards;
 }
 
 .horizontal-divider {
   border-top: 3px solid var(--dark-grey);
   width: 100%;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 </style>

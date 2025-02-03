@@ -59,7 +59,7 @@
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import LianPose from "../../images/lian-pose.png";
+import LianPose from "../../images/lian-pose-edited.png";
 
 const navbar = ref(null);
 const aboutSection = ref(null);

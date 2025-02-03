@@ -3,7 +3,7 @@
     <div id="contact-container" class="row">
       <!-- Title -->
       <div><h1 class="h1-light-bg" style="background-color: var(--off-white); color: black">Contact</h1></div>
-      <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert" - Lian Lambert</p>
+      <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert." - Lian Lambert</p>
       <hr class="horizontal-divider" />
 
       <div class="row mt-2">
@@ -58,7 +58,6 @@ const copyPhoneNumber = () => {
   flex-direction: column;
   width: 100%;
   max-width: 900px;
-  padding: 20px 0px;
   height: 800px;
   position: relative;
 }

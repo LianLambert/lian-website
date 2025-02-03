@@ -3,7 +3,7 @@
     <div id="experience-container">
       <!-- Title and  -->
       <h1 class="h1-dark-bg" style="background-color: var(--dark-purple)">Experience</h1>
-      <p class="quote-purple">"Life is either a daring adventure, or nothing at all" - Helen Keller</p>
+      <p class="quote-purple">"Life is either a daring adventure, or nothing at all." - Helen Keller</p>
 
       <!-- Education -->
       <hr class="horizontal-divider" />

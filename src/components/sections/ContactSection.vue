@@ -8,7 +8,7 @@
 
       <div class="row mt-2">
         <!-- Icons -->
-        <div class="d-flex align-items-start justify-content-end col-sm-6 col-12">
+        <div class="d-flex align-items-start justify-content-center justify-content-sm-end col-sm-6 col-12">
           <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
             <img src="../../images/email.svg" class="icon" />
           </a>
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Image -->
-        <img id="wave" class="col-sm-6 col-12" src="../../images/wave.png">
+        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="../../images/wave.png">
       </div>
     </div>
     <!-- Ground (Black) -->
@@ -58,7 +58,6 @@ const copyPhoneNumber = () => {
   flex-direction: column;
   width: 100%;
   max-width: 900px;
-  height: 800px;
   position: relative;
 }
 
@@ -87,22 +86,20 @@ const copyPhoneNumber = () => {
   height: auto;
   width: 70px;
 }
-
 .notification {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 8px 15px;
   border-radius: 5px;
   font-size: 14px;
-  width: 100%;
+  text-align: center;
   transition: all 0.3s ease;
-  animation: fadeInOut 2s forwards;
+  animation: fadeInOut 0.5s ease;
 }
-
 .horizontal-divider {
   border-top: 3px solid var(--dark-grey);
   width: 100%;
@@ -110,7 +107,7 @@ const copyPhoneNumber = () => {
 }
 
 #black-ground {
-  height: 100px;
+  height: 90px;
   position: absolute;
   background-color: black;
   bottom: 0;
@@ -118,6 +115,7 @@ const copyPhoneNumber = () => {
 }
 
 #wave {
+  max-width: 400px;
   z-index: 5;
 
   &:hover {

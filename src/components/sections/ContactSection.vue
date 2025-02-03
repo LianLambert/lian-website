@@ -1,26 +1,32 @@
 <template>
-  <section id="contact" class="section centered">
+  <section id="contact" class="section centered position-relative">
     <div id="contact-container" class="row">
       <!-- Title -->
       <div><h1 class="h1-light-bg" style="background-color: var(--off-white); color: black">Contact</h1></div>
       <p class="quote-grey">"You'll never regret reaching out to connect with Lian Lambert" - Lian Lambert</p>
       <hr class="horizontal-divider" />
 
-      <!-- to do: -->
-      <div class="d-flex align-items-center justify-content-center">
-        <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
-          <img src="../../images/email.svg" class="icon" />
-        </a>
-        <div class="icon-container position-relative" @click="copyPhoneNumber">
-          <img src="../../images/phone.svg" class="icon" />
-          <div v-if="notificationVisible" class="notification">Phone number copied!</div>
+      <div class="row mt-2">
+        <!-- Icons -->
+        <div class="d-flex align-items-start justify-content-end col-sm-6 col-12">
+          <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
+            <img src="../../images/email.svg" class="icon" />
+          </a>
+          <div class="icon-container position-relative" @click="copyPhoneNumber">
+            <img src="../../images/phone.svg" class="icon" />
+            <div v-if="notificationVisible" class="notification">Phone number copied!</div>
+          </div>
+          <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
+            <img src="../../images/linkedin.svg" class="icon" />
+          </a>
         </div>
-        <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
-          <img src="../../images/linkedin.svg" class="icon" />
-        </a>
 
+        <!-- Image -->
+        <img id="wave" class="col-sm-6 col-12" src="../../images/wave.png">
       </div>
     </div>
+    <!-- Ground (Black) -->
+    <div id="black-ground"></div>
   </section>
 </template>
 <script setup>
@@ -41,7 +47,8 @@ const copyPhoneNumber = () => {
 </script>
 <style scoped lang="scss">
 #contact {
-  padding: 4vw 2vw;
+  width: 100%;
+  padding-top: 3vw;
   color: black;
   background-color: var(--off-white);
 }
@@ -52,23 +59,34 @@ const copyPhoneNumber = () => {
   width: 100%;
   max-width: 900px;
   padding: 20px 0px;
-  height: 400;
+  height: 800px;
   position: relative;
 }
 
 .icon-container {
   cursor: pointer;
+  margin: 10px;
+  height: 110px;
+  width: 110px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     transform: scale(1.1);
+    background-color: black;
+
+    .icon {
+      filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(3534%) hue-rotate(264deg) brightness(118%) contrast(83%);
+    }
   }
 }
 
 .icon {
   filter: brightness(0) saturate(100%);
-  width: auto;
-  height: 9vw;
-  margin: 4vw;
+  height: auto;
+  width: 70px;
 }
 
 .notification {
@@ -90,5 +108,21 @@ const copyPhoneNumber = () => {
   border-top: 3px solid var(--dark-grey);
   width: 100%;
   margin: 30px 0;
+}
+
+#black-ground {
+  height: 100px;
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+#wave {
+  z-index: 5;
+
+  &:hover {
+    transform: rotate(-3deg);
+  }
 }
 </style>

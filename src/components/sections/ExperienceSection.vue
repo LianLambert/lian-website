@@ -22,13 +22,13 @@
       <hr class="horizontal-divider" />
       <div class="d-flex"><h2 class="h2-dark-bg">Work</h2></div>
       <ExperienceEntry
-        company="Hivestack by Perion"
+        company="Perion DOOH"
         :startDate="new Date('May 1, 2024')"
         :endDate="new Date('December 31, 2024')"
         position="Frontend Intern"
-        description="Contributed to the development of Hivestack's Digital Out of Home (DOOH) ad tech platform using <b>Vue.js</b>, emphasizing user experience and adhering to agile methodologies."
+        description="Contributed to the development of Perion's Digital Out of Home (DOOH) ad tech platform using <b>Vue.js</b>, emphasizing user experience and adhering to agile methodologies."
         location="Montreal, QB"
-        linkText="Hivestack by Perion"
+        linkText="Perion DOOH"
         link="https://www.hivestack.com/"
       />
       <ExperienceEntry
@@ -42,13 +42,13 @@
         link="https://www.stocate.com/"
       />
       <ExperienceEntry
-        company="IMMO SQUARE"
+        company="Immosquare"
         :startDate="new Date('June 1, 2023')"
         :endDate="new Date('August 1, 2023')"
         position="Junior Web Developer"
-        description="As a junior web developer at IMMO SQUARE, I learned the basics of web development including <b>HTML</b>, <b>CSS</b>, <b>Bootstrap</b> and <b>JavaScript</b>. I was also introduced to <b>Ruby on Rails</b> and <b>Sequel</b>. During my time at IMMO SQUARE I helped to develop and maintain highly functional and visually appealing web pages."
+        description="As a junior web developer at Immosquare, I learned the basics of web development including <b>HTML</b>, <b>CSS</b>, <b>Bootstrap</b> and <b>JavaScript</b>. I was also introduced to <b>Ruby on Rails</b> and <b>Sequel</b>. During my time at Immosquare I helped to develop and maintain highly functional and visually appealing web pages."
         location="Montreal, QB"
-        linkText="IMMO SQUARE"
+        linkText="Immosquare"
         link="https://immosquare.com/"
       />
     </div>

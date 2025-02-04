@@ -1,4 +1,4 @@
-export const RESUME_LINK = "/lian-website/Lian_Lambert_Resume_2025.pdf";
+export const RESUME_LINK = "/website/Lian_Lambert_Resume_2025.pdf";
 export const GITHUB_LINK = "https://github.com/LianLambert";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/lian-lambert/";
 export const EMAIL = "lian1lambert@gmail.com";

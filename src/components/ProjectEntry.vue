@@ -217,7 +217,7 @@ function equalizeProjectHeights() {
 }
 
 .project-video {
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   opacity: 1;
 }

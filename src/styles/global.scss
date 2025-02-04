@@ -131,3 +131,9 @@ h4 {
   font-style: italic;
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  *:hover {
+    pointer-events: none !important;
+  }
+}

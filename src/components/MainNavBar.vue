@@ -130,7 +130,6 @@ window.addEventListener("scroll", () => {
   position: sticky;
   top: 0;
   left: 0;
-  width: 100vw;
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -212,6 +211,10 @@ window.addEventListener("scroll", () => {
 
   #nav-links-container {
     margin-right: 4vw;
+  }
+
+  #nav-all {
+    width: 100vw;
   }
 }
 

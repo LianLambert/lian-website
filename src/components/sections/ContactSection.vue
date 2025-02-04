@@ -10,19 +10,19 @@
         <!-- Icons -->
         <div class="d-flex align-items-start justify-content-center justify-content-sm-end col-sm-6 col-12">
           <a class="icon-container" :href="`mailto:${EMAIL}`" target="_blank" alt="Email icon">
-            <img src="../../images/email.svg" class="icon" />
+            <img src="@/assets/svgs/email.svg" class="icon" />
           </a>
           <div class="icon-container position-relative" @click="copyPhoneNumber">
-            <img src="../../images/phone.svg" class="icon" />
+            <img src="@/assets/svgs/phone.svg" class="icon" />
             <div v-if="notificationVisible" class="notification">Phone number copied!</div>
           </div>
           <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-            <img src="../../images/linkedin.svg" class="icon" />
+            <img src="@/assets/svgs/linkedin.svg" class="icon" />
           </a>
         </div>
 
         <!-- Image -->
-        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="../../images/wave-edited.png">
+        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="@/assets/images/wave-edited.png">
       </div>
     </div>
     <!-- Ground (Black) -->

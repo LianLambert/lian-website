@@ -43,13 +43,13 @@
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
-              <img src="../../images/resume.svg" class="icon" />
+              <img src="@/assets/svgs/resume.svg" class="icon" />
             </a>
             <a class="icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
-              <img src="../../images/github.svg" class="icon" />
+              <img src="@/assets/svgs/github.svg" class="icon" />
             </a>
             <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-              <img src="../../images/linkedin.svg" class="icon" />
+              <img src="@/assets/svgs/linkedin.svg" class="icon" />
             </a>
           </div>
         </div>
@@ -60,7 +60,7 @@
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import { RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK } from "@/constants";
-import LianPose from "../../images/lian-pose-edited.png";
+import LianPose from "@/assets/images/lian-pose-edited.png";
 
 const navbar = ref(null);
 const aboutSection = ref(null);
@@ -102,7 +102,7 @@ onMounted(() => {
   position: relative;
   z-index: 10;
   padding: 5vw;
-  background-image: url("../../images/shapes.png");
+  background-image: url("@/assets/images/shapes.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

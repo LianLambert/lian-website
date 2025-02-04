@@ -68,19 +68,19 @@
 import ProjectEntry from "../ProjectEntry.vue";
 
 // project images
-import LostAtSea from "../../images/lost-at-sea.png";
-import Commit2Gather from "../../images/Commit2Gather.png";
-import TASCCRCG from "../../images/TASCCRCG.png";
-import Portfolio from "../../images/portfolio.png";
-import FPSUnity from "../../images/fps-unity.png";
-import LeapingFishVerlets from "../../images/leaping-fish-verlets.png";
+import LostAtSea from "@/assets/images/lost-at-sea.png";
+import Commit2Gather from "@/assets/images/Commit2Gather.png";
+import TASCCRCG from "@/assets/images/TASCCRCG.png";
+import Portfolio from "@/assets/images/portfolio.png";
+import FPSUnity from "@/assets/images/fps-unity.png";
+import LeapingFishVerlets from "@/assets/images/leaping-fish-verlets.png";
 
 // project videos
-import LostAtSeaVideo from "../../videos/LostAtSea-preview.mp4";
-import Commit2GatherVideo from "../../videos/Commit2Gather-preview.mp4";
-import TASCCRCGVideo from "../../videos/TASCCRCG-preview.mp4";
-import FPSUnityVideo from "../../videos/FPSUnity-preview.mp4";
-import LeapingFishVerletsVideo from "../../videos/LeapingFishVerlets-preview.mp4";
+import LostAtSeaVideo from "@/assets/videos/LostAtSea-preview.mp4";
+import Commit2GatherVideo from "@/assets/videos/Commit2Gather-preview.mp4";
+import TASCCRCGVideo from "@/assets/videos/TASCCRCG-preview.mp4";
+import FPSUnityVideo from "@/assets/videos/FPSUnity-preview.mp4";
+import LeapingFishVerletsVideo from "@/assets/videos/LeapingFishVerlets-preview.mp4";
 </script>
 <style scoped lang="scss">
 #projects {

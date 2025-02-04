@@ -2,12 +2,12 @@
   <b-navbar id="nav-all" toggleable="lg" variant="dark" style="background-color: black !important">
     <!-- Logo -->
     <b-navbar-brand id="nav-brand" @click.prevent="scrollToSection('about')">
-      <img src="../images/LL.svg" alt="toggle" id="logo" />
+      <img src="@/assets/svgs/LL.svg" alt="toggle" id="logo" />
     </b-navbar-brand>
 
     <!-- Toggle -->
     <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
-      <img src="../images/hamburger.svg" alt="toggle" style="width: 30px; height: auto" />
+      <img src="@/assets/svgs/hamburger.svg" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
@@ -25,13 +25,13 @@
         <!-- Social Icons -->
         <div id="nav-icons-container" class="centered">
           <a class="nav-icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
-            <img src="../images/resume.svg" class="nav-icon" />
+            <img src="@/assets/svgs/resume.svg" class="nav-icon" />
           </a>
           <a class="nav-icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
-            <img src="../images/github.svg" class="nav-icon" />
+            <img src="@/assets/svgs/github.svg" class="nav-icon" />
           </a>
           <a class="nav-icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-            <img src="../images/linkedin.svg" class="nav-icon" />
+            <img src="@/assets/svgs/linkedin.svg" class="nav-icon" />
           </a>
         </div>
       </b-navbar-nav>

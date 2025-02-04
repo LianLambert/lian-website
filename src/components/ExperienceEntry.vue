@@ -34,8 +34,8 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "../images/link.svg";
-import locationPinIcon from "../images/location-pin.svg";
+import linkIcon from "@/assets/svgs/link.svg";
+import locationPinIcon from "@/assets/svgs/location-pin.svg";
 import { computed } from "vue";
 import { format } from "date-fns";
 

@@ -82,7 +82,9 @@ const scrollToSection = (sectionId) => {
 
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+    // prevents fixed navbar position from hiding content
+    const offsetTop = section.offsetTop - navbar.value.offsetHeight;
+    window.scrollTo({ top: offsetTop, behavior: "smooth" });
   }
 };
 
@@ -93,7 +95,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 2}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 1}px`;
   }
 
   // closes navbar if user clicks outside it
@@ -136,7 +138,7 @@ window.addEventListener("scroll", () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 100;
   transition:
     background-color 0.3s ease,
     filter 0.3s ease,

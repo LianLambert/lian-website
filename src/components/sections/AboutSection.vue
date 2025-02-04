@@ -111,7 +111,7 @@ onMounted(() => {
   bottom: -37px;
   left: 50%;
   transform: translateX(-55%);
-  z-index: 100;
+  z-index: 1000;
 
   &:hover {
     filter: brightness(110%);

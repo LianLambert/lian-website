@@ -31,7 +31,7 @@
         :image="TASCCRCG"
         description="A 2D pixel art shoot’em up game following the theme 'Contraption'! Created for McGameJam 2024 and made with Unity/C# in < 48h."
         primaryLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
-        demoLink="https://www.youtube.com/watch?v=ISyCelCeTNc&t=9s&ab_channel=Lian"
+        demoLink="https://www.youtube.com/watch?v=ISyCelCeTNc&ab_channel=Lian"
         githubLink="https://github.com/LianLambert/The-Adventures-of-Super-Cool-Carrot-Rocket-Chessmaster-Girl-McGameJam2024"
         otherLink="https://lianl.itch.io/the-adventures-of-super-cool-carrot-rocket-chessmaster-girl"
         :demo-video="TASCCRCGVideo"

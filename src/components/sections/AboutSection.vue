@@ -42,13 +42,13 @@
           <!-- Icons -->
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
-            <a class="icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
+            <a class="icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
               <img src="../../images/resume.svg" class="icon" />
             </a>
-            <a class="icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
+            <a class="icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
               <img src="../../images/github.svg" class="icon" />
             </a>
-            <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
+            <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
               <img src="../../images/linkedin.svg" class="icon" />
             </a>
           </div>
@@ -59,6 +59,7 @@
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
+import { RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK } from "@/constants";
 import LianPose from "../../images/lian-pose-edited.png";
 
 const navbar = ref(null);

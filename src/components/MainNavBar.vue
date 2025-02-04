@@ -24,13 +24,13 @@
 
         <!-- Social Icons -->
         <div id="nav-icons-container" class="centered">
-          <a class="nav-icon-container" href="/Lian_Lambert_Resume_2025.pdf" target="_blank" alt="Resume icon">
+          <a class="nav-icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
             <img src="../images/resume.svg" class="nav-icon" />
           </a>
-          <a class="nav-icon-container" href="https://github.com/LianLambert" target="_blank" alt="Github icon">
+          <a class="nav-icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
             <img src="../images/github.svg" class="nav-icon" />
           </a>
-          <a class="nav-icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
+          <a class="nav-icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
             <img src="../images/linkedin.svg" class="nav-icon" />
           </a>
         </div>
@@ -40,6 +40,7 @@
 </template>
 
 <script setup>
+import { GITHUB_LINK, LINKEDIN_LINK, RESUME_LINK } from "@/constants";
 import { ref, onMounted, onUnmounted } from "vue";
 
 const navbar = ref(null);

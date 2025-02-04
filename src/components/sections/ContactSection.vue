@@ -9,14 +9,14 @@
       <div class="row mt-2">
         <!-- Icons -->
         <div class="d-flex align-items-start justify-content-center justify-content-sm-end col-sm-6 col-12">
-          <a class="icon-container" href="mailto:lian1lambert@gmail.com" target="_blank" alt="Email icon">
+          <a class="icon-container" :href="`mailto:${EMAIL}`" target="_blank" alt="Email icon">
             <img src="../../images/email.svg" class="icon" />
           </a>
           <div class="icon-container position-relative" @click="copyPhoneNumber">
             <img src="../../images/phone.svg" class="icon" />
             <div v-if="notificationVisible" class="notification">Phone number copied!</div>
           </div>
-          <a class="icon-container" href="https://www.linkedin.com/in/lian-lambert/" target="_blank" alt="LinkedIn icon">
+          <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
             <img src="../../images/linkedin.svg" class="icon" />
           </a>
         </div>
@@ -30,13 +30,13 @@
   </section>
 </template>
 <script setup>
+import { EMAIL, LINKEDIN_LINK, PHONE_NUMBER } from "@/constants";
 import { ref } from "vue";
 
-const phoneNumber = "647-228-5779";
 const notificationVisible = ref(false);
 
 const copyPhoneNumber = () => {
-  navigator.clipboard.writeText(phoneNumber).then(() => {
+  navigator.clipboard.writeText(PHONE_NUMBER).then(() => {
     notificationVisible.value = true;
 
     setTimeout(() => {

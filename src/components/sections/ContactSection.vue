@@ -22,7 +22,7 @@
         </div>
 
         <!-- Image -->
-        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="../../images/wave.png">
+        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="../../images/wave-edited.png">
       </div>
     </div>
     <!-- Ground (Black) -->

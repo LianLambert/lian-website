@@ -209,15 +209,15 @@ function equalizeProjectHeights() {
 .project-video {
   height: 150px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .project-image {
   object-fit: cover;
-  border-radius: 10px;
 }
 
 .project-video {
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   opacity: 1;
 }

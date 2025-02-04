@@ -138,7 +138,7 @@ window.addEventListener("scroll", () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 5;
   transition:
     background-color 0.3s ease,
     filter 0.3s ease,

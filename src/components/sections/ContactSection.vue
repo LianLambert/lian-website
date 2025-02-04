@@ -116,7 +116,7 @@ const copyPhoneNumber = () => {
 
 #wave {
   max-width: 400px;
-  z-index: 5;
+  z-index: 2;
 
   &:hover {
     transform: rotate(-3deg);

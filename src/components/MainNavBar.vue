@@ -2,12 +2,12 @@
   <b-navbar id="nav-all" toggleable="lg" variant="dark" style="background-color: black !important">
     <!-- Logo -->
     <b-navbar-brand id="nav-brand" @click.prevent="scrollToSection('about')">
-      <img src="@/assets/svgs/LL.svg" alt="toggle" id="logo" />
+      <img :src="SVG_LINKS.logo" alt="toggle" id="logo" />
     </b-navbar-brand>
 
     <!-- Toggle -->
     <b-navbar-toggle id="nav-toggle" target="navbar-content" @click="toggleNavbar">
-      <img src="@/assets/svgs/hamburger.svg" alt="toggle" style="width: 30px; height: auto" />
+      <img :src="SVG_LINKS.hamburger" alt="toggle" style="width: 30px; height: auto" />
     </b-navbar-toggle>
 
     <!-- Collapsible Section -->
@@ -25,13 +25,13 @@
         <!-- Social Icons -->
         <div id="nav-icons-container" class="centered">
           <a class="nav-icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
-            <img src="@/assets/svgs/resume.svg" class="nav-icon" />
+            <img :src="SVG_LINKS.resume" class="nav-icon" />
           </a>
           <a class="nav-icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
-            <img src="@/assets/svgs/github.svg" class="nav-icon" />
+            <img :src="SVG_LINKS.github" class="nav-icon" />
           </a>
           <a class="nav-icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-            <img src="@/assets/svgs/linkedin.svg" class="nav-icon" />
+            <img :src="SVG_LINKS.linkedin" class="nav-icon" />
           </a>
         </div>
       </b-navbar-nav>
@@ -40,8 +40,8 @@
 </template>
 
 <script setup>
-import { GITHUB_LINK, LINKEDIN_LINK, RESUME_LINK } from "@/constants";
-import { ref, onMounted, onUnmounted } from "vue";
+import { GITHUB_LINK, LINKEDIN_LINK, RESUME_LINK, SVG_LINKS } from "@/constants";
+import { ref, onMounted } from "vue";
 
 const navbar = ref(null);
 const isNavExpanded = ref(false);
@@ -79,10 +79,10 @@ const scrollToSection = (sectionId) => {
   if (isNavExpanded.value) {
     closeNavbar();
   }
-  
+
   const section = document.getElementById(sectionId);
   if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView({ behavior: "smooth" });
   }
 };
 
@@ -93,7 +93,7 @@ onMounted(() => {
 
   // prevents fixed navbar position from hiding content
   if (navbar.value) {
-    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight -2}px`;
+    document.documentElement.style.scrollPaddingTop = `${navbar.value.offsetHeight - 2}px`;
   }
 
   // closes navbar if user clicks outside it
@@ -226,7 +226,6 @@ window.addEventListener("scroll", () => {
       background-color: #202020;
     }
   }
-
 
   #nav-links-container,
   #nav-links-container > li,

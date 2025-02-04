@@ -1,6 +1,5 @@
 <template>
   <div class="experience-entry row g-0">
-
     <!-- Company/Time -->
     <div class="col-12 col-md-4 left-align-text mb-4" style="padding: 0">
       <a :href="props.link" target="_blank">
@@ -18,13 +17,13 @@
       <div v-html="description" class="my-2"></div>
       <div class="left-align-text">
         <b>
-          <img :src="locationPinIcon" class="experience-entry-icon" alt="location pin icon" />
+          <img :src="SVG_LINKS.locationPin" class="experience-entry-icon" alt="location pin icon" />
           &nbsp;
           <span>{{ location }}</span>
           <span v-if="props.link && props.linkText">
             &nbsp;|&nbsp;
             <a :href="props.link" target="_blank">
-              <img :src="linkIcon" class="experience-entry-icon" alt="link icon" />
+              <img :src="SVG_LINKS.link" class="experience-entry-icon" alt="link icon" />
               {{ props.linkText }}
             </a>
           </span>
@@ -34,8 +33,7 @@
   </div>
 </template>
 <script setup>
-import linkIcon from "@/assets/svgs/link.svg";
-import locationPinIcon from "@/assets/svgs/location-pin.svg";
+import { SVG_LINKS } from "@/constants";
 import { computed } from "vue";
 import { format } from "date-fns";
 

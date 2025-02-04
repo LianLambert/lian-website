@@ -1,18 +1,15 @@
 <template>
   <section id="about" class="section">
-
     <!-- Image -->
     <img id="lian-pose" :src="LianPose" alt="Lian striking a pose" />
 
     <!-- Text-Container -->
     <div id="text-container" :class="{ showAnimationPulse: showAnimationPulse }">
-
       <!-- Hey There! -->
       <span id="hey-there">Hey there! &nbsp;I'm Lian</span>
 
       <!-- Other Text -->
       <div class="row">
-
         <!-- Bio -->
         <div class="col-12 col-md-4 details-group">
           <!-- eslint-disable-next-line -->
@@ -43,13 +40,13 @@
           <div class="d-flex align-items-center details-group">
             <span class="details-label">Links: &nbsp;</span>
             <a class="icon-container" :href="RESUME_LINK" target="_blank" alt="Resume icon">
-              <img src="@/assets/svgs/resume.svg" class="icon" />
+              <img :src="SVG_LINKS.resume" class="icon" />
             </a>
             <a class="icon-container" :href="GITHUB_LINK" target="_blank" alt="Github icon">
-              <img src="@/assets/svgs/github.svg" class="icon" />
+              <img :src="SVG_LINKS.github" class="icon" />
             </a>
             <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-              <img src="@/assets/svgs/linkedin.svg" class="icon" />
+              <img :src="SVG_LINKS.linkedin" class="icon" />
             </a>
           </div>
         </div>
@@ -59,7 +56,7 @@
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
-import { RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK } from "@/constants";
+import { RESUME_LINK, GITHUB_LINK, LINKEDIN_LINK, SVG_LINKS } from "@/constants";
 import LianPose from "@/assets/images/lian-pose-edited.png";
 
 const navbar = ref(null);

@@ -10,19 +10,19 @@
         <!-- Icons -->
         <div class="d-flex align-items-start justify-content-center justify-content-sm-end col-sm-6 col-12">
           <a class="icon-container" :href="`mailto:${EMAIL}`" target="_blank" alt="Email icon">
-            <img src="@/assets/svgs/email.svg" class="icon" />
+            <img :src="SVG_LINKS.email" class="icon" />
           </a>
           <div class="icon-container position-relative" @click="copyPhoneNumber">
-            <img src="@/assets/svgs/phone.svg" class="icon" />
+            <img :src="SVG_LINKS.phone" class="icon" />
             <div v-if="notificationVisible" class="notification">Phone number copied!</div>
           </div>
           <a class="icon-container" :href="LINKEDIN_LINK" target="_blank" alt="LinkedIn icon">
-            <img src="@/assets/svgs/linkedin.svg" class="icon" />
+            <img :src="SVG_LINKS.linkedin" class="icon" />
           </a>
         </div>
 
         <!-- Image -->
-        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="@/assets/images/wave-edited.png">
+        <img id="wave" class="col-sm-6 col-12 d-block mx-auto" src="@/assets/images/wave-edited.png" />
       </div>
     </div>
     <!-- Ground (Black) -->
@@ -30,7 +30,7 @@
   </section>
 </template>
 <script setup>
-import { EMAIL, LINKEDIN_LINK, PHONE_NUMBER } from "@/constants";
+import { EMAIL, LINKEDIN_LINK, PHONE_NUMBER, SVG_LINKS } from "@/constants";
 import { ref } from "vue";
 
 const notificationVisible = ref(false);

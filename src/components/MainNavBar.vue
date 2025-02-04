@@ -17,8 +17,8 @@
         <div id="nav-links-container" class="centered flex-lg-row flex-column">
           <b-nav-item class="nav-link" @click.prevent="scrollToSection('about')" active>about</b-nav-item>
           <b-nav-item class="nav-link" @click.prevent="scrollToSection('experience')">experience</b-nav-item>
-          <b-nav-item class="nav-link" @click.prevent="scrollToSection('project')">projects</b-nav-item>
-          <b-nav-item class="nav-link" @click.prevent="scrollToSection('ability')">abilities</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('projects')">projects</b-nav-item>
+          <b-nav-item class="nav-link" @click.prevent="scrollToSection('abilities')">abilities</b-nav-item>
           <b-nav-item class="nav-link" @click.prevent="scrollToSection('contact')">contact</b-nav-item>
         </div>
 
